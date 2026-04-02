@@ -1,2 +1,2 @@
 # xkod-leads
-Gestor de prospectos XKOD
+Gestor de proyectos XKOD
