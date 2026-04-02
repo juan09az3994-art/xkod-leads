@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XKOD Leads</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="header__logo">
+      <span class="logo-mark">XK</span>
+      <span class="logo-text">LEADS</span>
+    </div>
+    <p class="header__sub">Gestión de prospectos — XKOD</p>
+  </header>
+
+  <main class="container">
+
+    <!-- FORMULARIO DE CAPTURA -->
+    <section class="panel">
+      <h2 class="panel__title">Nuevo Prospecto</h2>
+
+      <form id="lead-form" class="lead-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Ej. Corporativo XYZ" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="Ej. juan@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 771 234 5678" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status *</label>
+          <select id="status" name="status">
+            <option value="Pendiente">Pendiente</option>
+            <option value="Contactado">Contactado</option>
+            <option value="En Negociación">En Negociación</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notas">Notas</label>
+          <textarea id="notas" name="notas" placeholder="Detalles del prospecto..." rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Guardar Prospecto</button>
+
+      </form>
+    </section>
+
+    <!-- TABLA DE PROSPECTOS -->
+    <section class="panel">
+      <h2 class="panel__title">Lista de Prospectos</h2>
+
+      <div class="table-scroll">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Empresa</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Status</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody">
+            <!-- Fernando llenará esto con JS + localStorage en Semana 2 -->
+          </tbody>
+        </table>
+      </div>
+
+      <p class="empty-msg" id="empty-msg">No hay prospectos registrados aún.</p>
+
+    </section>
+
+  </main>
+
+  <script>
+    // Placeholder — lógica de guardado con localStorage en Semana 2 (Fernando)
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Formulario listo. La lógica de guardado se conectará en Semana 2.');
+    });
+  </script>
+
+</body>
+</html>
