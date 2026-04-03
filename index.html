@@ -24,42 +24,36 @@
     <section class="panel">
       <form id="lead-form" class="lead-form" novalidate>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required />
-          </div>
-          <div class="form-group">
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa" required />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
-          </div>
-          <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="5555555555" required />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="status">Estado</label>
-          <select id="status" name="status">
-            <option value="null" selected>Seleccione</option>
-            <option value="Pendiente">Pendiente</option>
-            <option value="Contactado">Contactado</option>
-            <option value="En Negociación">En Negociación</option>
-          </select>
-        </div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required />
+        <br>
+        <br>
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa" required />
+        <br>
+        <br>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
+        <br>
+        <br>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="5555555555" required />
+        <br>
+        <br>
+        <label for="status">Estado</label>
+        <select id="status" name="status">
+          <option value="null" selected>Seleccione</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Contactado">Contactado</option>
+          <option value="En Negociación">En Negociación</option>
+        </select>
+        <br>
+        <hr>
         <button onclick="guardar()">Guardar Prospecto</button>
 
       </form>
     </section>
-
+    <hr>
     <!-- TABLA-->
     <section class="panel">
       <h2>Tabla</h2>
@@ -70,9 +64,7 @@
             <tr>
             </tr>
           </thead>
-          <tbody id="leads-tbody">
             <!-- Semana 2 -->
-          </tbody>
         </table>
       </div>
     </section>
