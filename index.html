@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XKOD Leds</title>
+  <title>XKOD Leads</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
@@ -13,7 +13,7 @@
   <header class="header">
     <div class="header__logo">
       <span class="logo-mark">XK</span>
-      <span class="logo-text">LEDS</span>
+      <span class="logo-text">LEADS</span>
     </div>
     <p>Gestión de prospectos — XKOD</p>
   </header>
@@ -59,12 +59,17 @@
       <h2>Tabla</h2>
 
       <div class="table-scroll">
-        <table class="leads-table">
+        <table class="leads-table" border="1">
           <thead>
             <tr>
+              <th>Nombre</th>
+              <th>Empresa</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Status</th>
             </tr>
           </thead>
-            <!-- Semana 2 -->
+          <tbody id="tablaDatos"></tbody>
         </table>
       </div>
     </section>
