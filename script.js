@@ -48,3 +48,22 @@ function guardar() {
   renderTabla(); // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
 }
+
+function mostrarDatos(){
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
+
+  let tabla = document.getElementById("tablaDatos");
+  tabla.innerHTML = "";
+
+  datos.forEach(lead => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${lead.nombre}</td>
+        <td>${lead.empresa}</td>
+        <td>${lead.email}</td>
+        <td>${lead.telefono}</td>
+        <td>${lead.status}</td>
+      </tr>
+    `;
+  });
+}
