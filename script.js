@@ -48,7 +48,7 @@ function guardar() {
   renderTabla(); // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
 }
-
+// funcion para mostrar los datos de la tabla
 function mostrarDatos(){
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
@@ -67,3 +67,6 @@ function mostrarDatos(){
     `;
   });
 }
+// ejecutar la funcion anterior
+mostrarDatos();
+
