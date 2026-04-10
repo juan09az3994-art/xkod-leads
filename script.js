@@ -57,4 +57,4 @@ function mostrarDatos() {
 }
 
 // Ejecutar al cargar
-mostrarDatos();
+mostrarDatos();mostrarDatos();
