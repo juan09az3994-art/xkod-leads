@@ -4,25 +4,6 @@ localStorage.setItem('saludo', 'Hola Mundo');
 const resultado = localStorage.getItem('saludo');
 console.log(resultado);
 
-function guardar(){
-  let nombre = document.getElementById("nombre").value;
-  let empresa = document.getElementById("empresa").value;
-  let email = document.getElementById("email").value;
-  let telefono = document.getElementById("telefono").value;
-  let status = document.getElementById("status").value;
-
-  let lead = { nombre, empresa, email, telefono, status };
-
-  let leads = JSON.parse(localStorage.getItem("leads")) || [];
-  leads.push(lead);
-  localStorage.setItem("leads", JSON.stringify(leads));
-
-  mostrarDatos();
-
-}
-
-
-
 function cargarLeads() {
   return JSON.parse(localStorage.getItem('leads')) || [];
 }
