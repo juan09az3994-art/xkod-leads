@@ -49,6 +49,7 @@ function guardar() {
   document.getElementById('lead-form').reset();
 }
 
+// Funcion de renderizado para la tabla
 function mostrarDatos() {
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
@@ -68,5 +69,5 @@ function mostrarDatos() {
   });
 }
 
-// Ejecutar al cargar
+// Ejecutar el metodo 
 mostrarDatos();
