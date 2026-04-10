@@ -45,7 +45,7 @@ function guardar() {
   leads.push(nuevoLead);
   guardarLeads(leads);
 
-  renderTabla(); // Pinta el lead en la tabla inmediatamente
+  mostrarDatos() // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
 }
 
