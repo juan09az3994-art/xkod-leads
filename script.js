@@ -1,19 +1,30 @@
 
+// ── SEMANA 1: Prueba de concepto ──
 localStorage.setItem('saludo', 'Hola Mundo');
-
 const resultado = localStorage.getItem('saludo');
 console.log(resultado);
 
+// ── SEMANA 2: Capturar y guardar leads ──
+
+/**
+ * Carga los leads guardados en localStorage.
+ * Si no hay nada, devuelve un arreglo vacío.
+ */
 function cargarLeads() {
   return JSON.parse(localStorage.getItem('leads')) || [];
 }
 
-
+/**
+ * Guarda el arreglo completo de leads en localStorage.
+ */
 function guardarLeads(leads) {
   localStorage.setItem('leads', JSON.stringify(leads));
 }
 
-
+/**
+ * Se ejecuta al hacer clic en "Guardar Prospecto".
+ * Lee el formulario, crea el objeto y lo guarda.
+ */
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
@@ -34,5 +45,6 @@ function guardar() {
   leads.push(nuevoLead);
   guardarLeads(leads);
 
+  renderTabla(); // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
 }
