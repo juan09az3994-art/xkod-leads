@@ -69,5 +69,11 @@ function mostrarDatos() {
   });
 }
 
+// Funcion para buscar
+function buscar(){
+  let filtro;
+  
+}
+
 // Ejecutar el metodo 
 mostrarDatos();
