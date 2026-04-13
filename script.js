@@ -69,6 +69,7 @@ function mostrarDatos() {
   });
 }
 
+// Semana 3
 // Funcion para buscar
 function buscar(){
   let filtro;
