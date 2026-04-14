@@ -86,7 +86,24 @@ function eliminar(id) {
 // Semana 3 funciones para buscar, eliminar y editar
 // Funcion para buscar
 function buscar(){
-  
+  let filtro = document.getElementById("buscador").value.toLowerCase();
+  let tabla = document.getElementById("tablaDatos");
+  tabla.innerHTML = "";
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
+
+  datos.forEach(lead => {
+    if(lead.nombre.toLowerCase().includes(filtro)){
+      tabla.innerHTML += `
+        <tr>
+          <td>${lead.nombre}</td>
+          <td>${lead.empresa}</td>
+          <td>${lead.email}</td>
+          <td>${lead.telefono}</td>
+          <td>${lead.status}</td>
+        </tr>
+      `;
+    }
+  });
 }
 
 // Ejecutar el metodo 
