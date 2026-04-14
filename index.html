@@ -24,37 +24,36 @@
         <div>
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required />
+          <br>
+          <br>
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa" required />
+          <br>
+          <br>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
+          <br>
+          <br>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="5555555555" required />
+          <br>
+          <br>
+          <label for="status">Estado</label>
+          <select id="status" name="status">
+            <option value="null" selected>Seleccione</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Contactado">Contactado</option>
+            <option value="En Negociación">En Negociación</option>
+          </select>
+          <br>
+          <hr>
+          <button onclick="guardar()">Guardar</button>
         </div>
-        <br>
-        <br>
-        <label for="empresa">Empresa</label>
-        <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa" required />
-        <br>
-        <br>
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
-        <br>
-        <br>
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="5555555555" required />
-        <br>
-        <br>
-        <label for="status">Estado</label>
-        <select id="status" name="status">
-          <option value="null" selected>Seleccione</option>
-          <option value="Pendiente">Pendiente</option>
-          <option value="Contactado">Contactado</option>
-          <option value="En Negociación">En Negociación</option>
-        </select>
-        <br>
-        <hr>
-        <button onclick="guardar()">Guardar</button>
         <div>
           <label for="buscador">Buscador</label>
           <input type="text" id="buscador" placeholder="Buscar Nombre">
+          <button onclick="buscar()">Buscar</button>
         </div>
-        
-
       </form>
     </section>
     <hr>
