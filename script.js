@@ -88,21 +88,25 @@ function eliminar(id) {
 function buscar(){
   let filtro=document.getElementById("buscador").value.toLowerCase();
   let tabla=document.getElementById("tabla");
-  let filas=tabla.getElementsByTagName("tr");
+  let datos=JSON.parse(localStorage.getItem("leads")) || [];
+  let filtrados=datos.filter(lead =>
+    lead.nombre.toLowerCase().includes(filtro) ||
+    lead.empresa.toLowerCase().includes(filtro) ||
+    lead.email.toLowerCase().includes(filtro)
+  );
 
-  for(let i=0; i<filas.length; i++){
-    let celdas=filas[i].getElementsByTagName("td");
-    let encontrado=false;
-    for(let j=0; j<celdas.length; j++){
-      if(celdas[j].textContent.toLowerCase().includes(filtro)){
-        encontrado=true;
-        break;
-      }
-
-    }
-    filas[i].style.display=encontrado ? "" : "none";
-  }
-  
+  tabla.innerHTML="";
+  filtrados.forEach(lead => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${lead.nombre}</td>
+        <td>${lead.empresa}</td>
+        <td>${lead.email}</td>
+        <td>${lead.telefono}</td>
+        <td>${lead.status}</td>
+      </tr>
+    `;
+  });
   
 }
 
