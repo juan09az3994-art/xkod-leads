@@ -92,6 +92,7 @@ function buscar(){
   let filtrados = datos.filter(lead =>
     lead.nombre.toLowerCase().includes(filtro)
   );
+  
 
   let tabla = document.getElementById("tabla");
   tabla.innerHTML = "";
@@ -107,6 +108,7 @@ function buscar(){
       </tr>
     `;
   });
+
   
 }
 
