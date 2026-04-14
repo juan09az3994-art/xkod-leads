@@ -86,9 +86,26 @@ function eliminar(id) {
 // Semana 3 funciones para buscar, eliminar y editar
 // Funcion para buscar
 function buscar(){
-  let filtro = document.getElementById("buscador").value.toLowerCase();
+  let input = document.getElementById("buscador");
+  let filtro = input.value.toUpperCase(); // Convertir a mayúsculas para búsqueda insensible a mayúsculas
   let tabla = document.getElementById("tablaDatos");
-  tabla.innerHTML = "";
+  let filas = tabla.getElementsByTagName("tr");
+
+  // 2. Recorrer todas las filas (omitiendo la cabecera)
+  for (let i = 1; i < filas.length; i++) {
+      let celdaNombre = filas[i].getElementsByTagName("th")[0]; // Columna 0: Nombre
+      
+      if (celdaNombre) {
+          let textoValor = celdaNombre.textContent || celdaNombre.innerText;
+          
+          // 3. Comprobar si el texto coincide
+          if (textoValor.toUpperCase().indexOf(filtro) > -1) {
+              filas[i].style.display = ""; // Mostrar
+          } else {
+              filas[i].style.display = "none"; // Ocultar
+          }
+      }
+  }
 }
 
 // Ejecutar el metodo 
