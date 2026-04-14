@@ -93,7 +93,7 @@ function buscar(){
 
   // 2. Recorrer todas las filas (omitiendo la cabecera)
   for (let i = 1; i < filas.length; i++) {
-      let celdaNombre = filas[i].getElementsByTagName("th")[0]; // Columna 0: Nombre
+      let celdaNombre = filas[i].getElementsByTagName("td")[0]; // Columna 0: Nombre
       
       if (celdaNombre) {
           let textoValor = celdaNombre.textContent || celdaNombre.innerText;
