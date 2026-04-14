@@ -69,6 +69,20 @@ function mostrarDatos() {
   });
 }
 
+/**
+ * Elimina un lead por su ID de localStorage
+ * y actualiza la tabla inmediatamente.
+ */
+function eliminar(id) {
+  const confirmar = confirm('¿Estás seguro de eliminar este prospecto?');
+  if (!confirmar) return;
+
+  let leads = cargarLeads();
+  leads = leads.filter(lead => lead.id !== id);
+  guardarLeads(leads);
+  mostrarDatos();
+}
+
 // Semana 3
 // Funcion para buscar
 function buscar(){
