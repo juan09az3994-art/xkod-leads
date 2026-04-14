@@ -86,7 +86,23 @@ function eliminar(id) {
 // Semana 3
 // Funcion para buscar
 function buscar(){
-  let filtro;
+  let filtro=document.getElementById("buscador").value.toLowerCase();
+  let tabla=document.getElementById("tabla");
+  let filas=tabla.getElementsByTagName("tr");
+
+  for(let i=0; i<filas.length; i++){
+    let celdas=filas[i].getElementsByTagName("td");
+    let encontrado=false;
+    for(let j=0; j<celdas.length; j++){
+      if(celdas[j].textContent.toLowerCase().includes(filtro)){
+        encontrado=true;
+        break;
+      }
+
+    }
+    filas[i].style.display=encontrado ? "" : "none";
+  }
+  
   
 }
 
