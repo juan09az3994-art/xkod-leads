@@ -83,7 +83,7 @@ function eliminar(id) {
   mostrarDatos();
 }
 
-// Semana 3
+// Semana 3 funciones para buscar, eliminar y editar
 // Funcion para buscar
 function buscar(){
   let filtro = document.getElementById("buscador").value.toLowerCase();
