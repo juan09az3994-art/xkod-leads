@@ -86,13 +86,13 @@ function eliminar(id) {
 // Semana 3
 // Funcion para buscar
 function buscar(){
-  let filtro = document.getElementById("buscar").value.toLowerCase();
+  let filtro = document.getElementById("buscador").value.toLowerCase();
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
   let filtrados = datos.filter(lead =>
     lead.nombre.toLowerCase().includes(filtro)
   );
-  
+
 
   let tabla = document.getElementById("tabla");
   tabla.innerHTML = "";
