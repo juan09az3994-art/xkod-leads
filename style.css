@@ -125,16 +125,16 @@ hr {
 .lead-form button:active { transform: scale(0.98); }
 
 /* TABLA */
-.table-scroll { overflow-x: auto; }
+.tabla { overflow-x: auto; }
 
-.leads-table {
+.leads-tabla {
   width: 100%;
   border-collapse: collapse;
   font-size: 13.5px;
   border: none !important;
 }
 
-.leads-table th {
+.leads-tabla th {
   padding: 10px 14px;
   text-align: left;
   font-size: 11px;
@@ -146,15 +146,15 @@ hr {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.leads-table td {
+.leads-tabla td {
   padding: 12px 14px;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   vertical-align: middle;
 }
 
-.leads-table tr:last-child td { border-bottom: none; }
-.leads-table tbody tr:hover td { background: rgba(255, 255, 255, 0.05); }
+.leads-tabla tr:last-child td { border-bottom: none; }
+.leads-tabla tbody tr:hover td { background: rgba(255, 255, 255, 0.05); }
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
