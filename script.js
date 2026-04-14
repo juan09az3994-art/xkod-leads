@@ -93,8 +93,7 @@ function buscar(){
     lead.nombre.toLowerCase().includes(filtro)
   );
 
-
-  let tabla = document.getElementById("tabla");
+  let tabla = document.getElementById("tablaDatos");
   tabla.innerHTML = "";
 
     filtrados.forEach((lead, index) => {
@@ -108,8 +107,6 @@ function buscar(){
       </tr>
     `;
   });
-
-  
 }
 
 // Ejecutar el metodo 
