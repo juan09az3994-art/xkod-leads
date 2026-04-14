@@ -86,18 +86,18 @@ function eliminar(id) {
 // Semana 3
 // Funcion para buscar
 function buscar(){
-  let filtro=document.getElementById("buscador").value.toLowerCase();
-  let tabla=document.getElementById("tabla");
-  let datos=JSON.parse(localStorage.getItem("leads")) || [];
-  let filtrados=datos.filter(lead =>
-    lead.nombre.toLowerCase().includes(filtro) ||
-    lead.empresa.toLowerCase().includes(filtro) ||
-    lead.email.toLowerCase().includes(filtro)
+  let filtro = document.getElementById("buscar").value.toLowerCase();
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
+
+  let filtrados = datos.filter(lead =>
+    lead.nombre.toLowerCase().includes(filtro)
   );
 
-  tabla.innerHTML="";
-  filtrados.forEach(lead => {
-    tabla.innerHTML += `
+  let tabla = document.getElementById("tabla");
+  tabla.innerHTML = "";
+
+    filtrados.forEach((lead, index) => {
+      tabla.innerHTML += `
       <tr>
         <td>${lead.nombre}</td>
         <td>${lead.empresa}</td>
