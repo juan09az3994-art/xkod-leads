@@ -9,7 +9,7 @@ function validar() {
   if (document.getElementById('email').checkValidity()) {
     console.log("Email válido");
   } else {
-    console.log("Email inválido");
+    alert("Email inválido");
   }
 }
 
