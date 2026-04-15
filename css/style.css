@@ -168,7 +168,15 @@ hr {
   transition: background 0.2s;
 }
 
+
 /*SEMANA 3 */
+.editar {
+  filter: hue-rotate(180deg);
+}
+
+.eliminar {
+  filter: hue-rotate(300deg);
+}
 .badge {
   display: inline-block;
   padding: 3px 10px;
