@@ -21,13 +21,18 @@ function guardarLeads(leads) {
     Lee el formulario, crea el objeto y lo guarda.
  */
 function validarcorreo() {
-  const email = document.getElementById('email').value;
+  const email = document.getElementById("email").value;
+  const error = document.getElementById("errorEmail");
+
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!regex.test(email)) {
-    alert('Por favor, ingresa un correo electrónico válido.');
+    error.style.display = "block";
     return false;
+  } else {
+    error.style.display = "none";
+    return true;
   }
-  return true;
 }
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
