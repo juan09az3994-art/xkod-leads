@@ -28,9 +28,11 @@ function validarcorreo() {
 
   if (!regex.test(email)) {
     error.style.display = "block";
+    alert("Por favor, ingresa un correo electrónico válido.");
     return false;
   } else {
     error.style.display = "none";
+    alert("Correo electrónico válido.");
     return true;
   }
 }
