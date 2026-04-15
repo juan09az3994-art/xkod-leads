@@ -122,25 +122,33 @@ function editar(id) {
 }
 // Funcion para buscar
 function buscar(){
-  let input = document.getElementById("buscador");
-  let filtro = input.value.toUpperCase(); // Convertir a mayúsculas para búsqueda insensible a mayúsculas
-  let tabla = document.getElementById("tablaDatos");
-  let filas = tabla.getElementsByTagName("tr");
-  // 2. Recorrer todas las filas (omitiendo la cabecera)
-  for (let i = 1; i < filas.length; i++) {
-      let celdaNombre = filas[i].getElementsByTagName("td")[0]; // Columna 0: Nombre
+  let filtro = document.getElementById("buscador").value;
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
-      if (celdaNombre) {
-          let textoValor = celdaNombre.textContent || celdaNombre.innerText;
+  let tabla = document.getElementById("tabla");
+  tabla.innerHTML = "";
 
-          // 3. Comprobar si el texto coincide
-          if (textoValor.toUpperCase().indexOf(filtro) > -1) {
-              filas[i].style.display = ""; // Mostrar
-          } else {
-              filas[i].style.display = "none"; // Ocultar
-          }
-      }
+  if(filtro === ""){
+    mostrarDatos();
+    return;
   }
+
+  let filtrados = datos.filter(lead =>
+    lead.id == filtro // 🔥 búsqueda por ID
+  );
+
+  filtrados.forEach((lead) => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${lead.id}</td>
+        <td>${lead.nombre}</td>
+        <td>${lead.empresa}</td>
+        <td>${lead.email}</td>
+        <td>${lead.telefono}</td>
+        <td>${lead.status}</td>
+      </tr>
+    `;
+  });
 }
 // Ejecutar el metodo 
 mostrarDatos();
