@@ -35,11 +35,15 @@ function validarcorreo() {
   }
 }
 function guardar() {
+  // ✅ VALIDAR PRIMERO
+  if (!validarcorreo()) return;
+
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
   const email    = document.getElementById('email').value;
   const telefono = document.getElementById('telefono').value;
   const status   = document.getElementById('status').value;
+
   const nuevoLead = {
     id:       Date.now(),
     nombre:   nombre,
@@ -48,12 +52,12 @@ function guardar() {
     telefono: telefono,
     status:   status,
   };
+
   const leads = cargarLeads();
   leads.push(nuevoLead);
   guardarLeads(leads);
-  validarcorreo();
 
-  mostrarDatos() // Pinta el lead en la tabla inmediatamente
+  mostrarDatos();
   document.getElementById('lead-form').reset();
 }
 // Funcion de renderizado para la tabla
