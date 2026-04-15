@@ -27,7 +27,6 @@ function validarcorreo() {
     alert('Por favor, ingresa un correo electrónico válido.');
     return false;
   }
-  return true;
 }
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
