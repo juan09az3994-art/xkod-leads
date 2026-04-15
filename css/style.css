@@ -1,5 +1,5 @@
 /*SEMANA 2*/
-/* :root {
+:root {
   --bg:       #2c3e50;
   --surface:  #34495e;
   --border:   rgba(255, 255, 255, 0.12);
@@ -120,7 +120,7 @@ hr {
 .lead-form button:hover  { background: var(--accent-h); transform: scale(1.02); }
 .lead-form button:active { transform: scale(0.98); }
 
-/* TABLA 
+/* TABLA */
 .table-scroll {
   overflow-x: auto;
   border-radius: var(--radius);
@@ -168,7 +168,7 @@ hr {
   transition: background 0.2s;
 }
 
-/*SEMANA 3
+/*SEMANA 3 */
 .badge {
   display: inline-block;
   padding: 3px 10px;
@@ -187,177 +187,3 @@ hr {
   .container { padding: 0 12px; margin: 16px auto; }
   .panel     { padding: 16px; }
 } 
-/* 🎨 PALETA DE COLORES */
-:root {
-  --azul-principal: #113A58;
-  --azul-secundario: #307B8E;
-  --gris-claro: #CEE5D5;
-  --verde-claro: #A9D3C5;
-  --verde-fuerte: #376B2B;
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* BODY */
-body {
-  background: var(--azul-principal);
-  color: white;
-}
-
-/* HEADER */
-.header {
-  background: var(--azul-secundario);
-  padding: 15px;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-/* CONTENEDOR PRINCIPAL */
-.container {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 10px;
-}
-
-/* PANEL */
-.panel {
-  background: var(--azul-secundario);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-}
-
-/* TITULOS */
-h1, h2, h3 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* FORMULARIO */
-.lead-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.lead-form label {
-  font-size: 14px;
-}
-
-.lead-form input,
-.lead-form select {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  background: var(--gris-claro);
-  color: black;
-  font-size: 14px;
-}
-
-/* BOTONES */
-button {
-  background: var(--verde-fuerte);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #2d5a23;
-  transform: scale(1.03);
-}
-
-/* BUSCADOR */
-.container-buscador {
-  margin-top: 20px;
-  background: var(--azul-principal);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.container-buscador input {
-  margin-top: 5px;
-}
-
-/* TABLA */
-.tabla {
-  overflow-x: auto;
-}
-
-.leads-tabla {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  background: var(--gris-claro);
-  color: black;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.leads-tabla th {
-  background: var(--verde-claro);
-  padding: 10px;
-}
-
-.leads-tabla td {
-  padding: 10px;
-  text-align: center;
-}
-
-.leads-tabla tr:nth-child(even) {
-  background: #e6f2ed;
-}
-
-/* ICONOS (acciones) */
-.leads-tabla img {
-  transition: 0.2s;
-}
-
-.leads-tabla img:hover {
-  transform: scale(1.2);
-}
-
-/* STATUS COLORES */
- .status {
-      padding: 5px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .pendiente { background: red; }
-    .contactado { background: green; }
-    .negociacion { background: blue; }
-
-    .btn-delete {
-      background: crimson;
-      color: white;
-      cursor: pointer;
-    }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .container {
-    padding: 5px;
-  }
-
-  .panel {
-    padding: 15px;
-  }
-
-  button {
-    width: 100%;
-  }
-}
