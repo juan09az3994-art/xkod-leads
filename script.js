@@ -4,14 +4,6 @@ localStorage.setItem('saludo', 'Hola Mundo');
 const resultado = localStorage.getItem('saludo');
 console.log(resultado);
 
-function validar() {
-  const emailInput = document.getElementById('email').value;
-  if (document.getElementById('email').checkValidity()) {
-    console.log("Email válido");
-  } else {
-    alert("Email inválido");
-  }
-}
 
 // ── SEMANA 2: Capturar y guardar leads ──
 
@@ -34,6 +26,15 @@ function guardarLeads(leads) {
    Se ejecuta al hacer clic en "Guardar Prospecto".
     Lee el formulario, crea el objeto y lo guarda.
  */
+function validar() {
+  const emailInput = document.getElementById('email').value;
+  if (document.getElementById('email').checkValidity()) {
+    alert("Email válido");
+    guardar();
+  } else {
+    alert("Email inválido");
+  }
+}
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
