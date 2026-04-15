@@ -30,7 +30,6 @@ function validar() {
   const emailInput = document.getElementById('email').value;
   if (document.getElementById('email').checkValidity()) {
     alert("Email válido");
-    guardar();
   } else {
     alert("Email inválido");
   }
@@ -54,6 +53,7 @@ function guardar() {
   const leads = cargarLeads();
   leads.push(nuevoLead);
   guardarLeads(leads);
+  validar();
 
   mostrarDatos() // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
@@ -119,6 +119,4 @@ function buscar(){
 }
 
 // Ejecutar el metodo 
-validar();
-
 mostrarDatos();
