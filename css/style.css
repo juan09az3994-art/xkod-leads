@@ -1,13 +1,10 @@
 /*SEMANA 2*/
 :root {
-  --bg:       #2c3e50;
-  --surface:  #34495e;
-  --border:   rgba(255, 255, 255, 0.12);
-  --accent:   #3498db;
-  --accent-h: #2980b9;
-  --text:     #ffffff;
-  --muted:    #bdc3c7;
-  --dim:      #7f8c8d;
+  --azul-principal: #113A58;
+  --azul-secundario: #307B8E;
+  --gris-claro: #CEE5D5;
+  --verde-claro: #A9D3C5;
+  --verde-fuerte: #376B2B;
   --radius:   10px;
   --shadow:   0px 4px 10px rgba(0, 0, 0, 0.5);
 }
