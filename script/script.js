@@ -158,6 +158,7 @@ function buscar(){
   });
 }
 // Ejecutar el metodo 
+mostrarDatos();
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -165,7 +166,7 @@ form.addEventListener("submit", function(e) {
   let error = document.getElementById("errorEmail");
 
   // VALIDACIÓN
-  if(!validarEmail(email)){
+  if(!validarcorreo(email)){
     error.style.display = "block";
     return; // ❌ NO guarda
   } else {
@@ -186,5 +187,4 @@ form.addEventListener("submit", function(e) {
   localStorage.setItem("leads", JSON.stringify(datos));
 
   form.reset();
-  mostrarDatos();
 });
