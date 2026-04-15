@@ -54,16 +54,22 @@ function mostrarDatos() {
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
   let tabla = document.getElementById("tablaDatos");
   tabla.innerHTML = "";
+ 
   datos.forEach(lead => {
-    tabla.innerHTML += 
+    tabla.innerHTML += `
       <tr>
+        <td>${lead.id}</td>
         <td>${lead.nombre}</td>
         <td>${lead.empresa}</td>
         <td>${lead.email}</td>
         <td>${lead.telefono}</td>
         <td>${lead.status}</td>
+        <td>
+          <img src="https://cdn-icons-png.flaticon.com/512/1827/1827933.png" width="20" style="cursor:pointer;" onclick="editar(${lead.id})" title="Editar" />
+          <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" width="20" style="cursor:pointer; margin-left:10px;" onclick="eliminar(${lead.id})" title="Eliminar" />
+        </td>
       </tr>
-    ;
+    `;
   });
 }
 /**
