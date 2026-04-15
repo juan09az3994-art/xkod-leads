@@ -135,7 +135,7 @@ function buscar(){
   let filtro = document.getElementById("buscador").value.toLowerCase();
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
-  let tabla = document.getElementById("tabla");
+  let tabla = document.getElementById("tablaDatos");
   tabla.innerHTML = "";
 
   if(filtro === ""){
