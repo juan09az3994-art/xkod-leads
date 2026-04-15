@@ -122,20 +122,27 @@ function editar(id) {
 }
 // Funcion para buscar
 function buscar(){
-  let filtro = document.getElementById("buscador").value;
+  let filtro = document.getElementById("buscador").value.toLowerCase();
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
   let tabla = document.getElementById("tabla");
   tabla.innerHTML = "";
 
+  // Si está vacío → mostrar todo
   if(filtro === ""){
     mostrarDatos();
     return;
   }
 
-  let filtrados = datos.filter(lead =>
-    lead.id == filtro // 🔥 búsqueda por ID
-  );
+  let filtrados = datos.filter(lead => {
+    let esNumero = !isNaN(filtro);
+
+    if(esNumero){
+      return lead.id.toString().includes(filtro);
+    } else {
+      return lead.nombre.toLowerCase().includes(filtro);
+    }
+  });
 
   filtrados.forEach((lead) => {
     tabla.innerHTML += `
