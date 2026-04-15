@@ -331,21 +331,21 @@ button:hover {
 }
 
 /* STATUS COLORES */
-td:nth-child(6) {
-  font-weight: bold;
-}
+ .status {
+      padding: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-td:contains("Pendiente") {
-  color: red;
-}
+    .pendiente { background: red; }
+    .contactado { background: green; }
+    .negociacion { background: blue; }
 
-td:contains("Contactado") {
-  color: green;
-}
-
-td:contains("En Negociación") {
-  color: blue;
-}
+    .btn-delete {
+      background: crimson;
+      color: white;
+      cursor: pointer;
+    }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
