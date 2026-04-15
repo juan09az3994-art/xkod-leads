@@ -73,7 +73,7 @@ function mostrarDatos() {
   });
 }
 
-}
+
 // Semana 3 funciones para buscar, eliminar y editar
 
 // ── SEMANA 3: Eliminar ──
