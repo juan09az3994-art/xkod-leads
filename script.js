@@ -2,45 +2,38 @@
 localStorage.setItem('saludo', 'Hola Mundo');
 const resultado = localStorage.getItem('saludo');
 console.log(resultado);
-
 // ── SEMANA 2: Capturar y guardar leads ──
 /**
- * Carga los leads guardados en localStorage.
- * Si no hay nada, devuelve un arreglo vacío.
+   Carga los leads guardados en localStorage.
+   Si no hay nada, devuelve un arreglo vacío.
  */
 function cargarLeads() {
   return JSON.parse(localStorage.getItem('leads')) || [];
 }
-
 /**
  * Guarda el arreglo completo de leads en localStorage.
  */
 function guardarLeads(leads) {
   localStorage.setItem('leads', JSON.stringify(leads));
 }
-
 /**
- * Valida que el campo email tenga formato correcto.
+   Se ejecuta al hacer clic en "Guardar Prospecto".
+    Lee el formulario, crea el objeto y lo guarda.
  */
 function validar() {
+  const emailInput = document.getElementById('email').value;
   if (document.getElementById('email').checkValidity()) {
     alert("Email válido");
   } else {
     alert("Email inválido");
   }
 }
-
-/**
- * Se ejecuta al hacer clic en "Guardar Prospecto".
- * Lee el formulario, crea el objeto y lo guarda.
- */
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
   const email    = document.getElementById('email').value;
   const telefono = document.getElementById('telefono').value;
   const status   = document.getElementById('status').value;
-
   const nuevoLead = {
     id:       Date.now(),
     nombre:   nombre,
@@ -49,44 +42,30 @@ function guardar() {
     telefono: telefono,
     status:   status,
   };
-
   const leads = cargarLeads();
   leads.push(nuevoLead);
   guardarLeads(leads);
   validar();
-  mostrarDatos();
+  mostrarDatos() // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
 }
-
-// ── SEMANA 2: Función de renderizado ──
-/**
- * Lee los leads de localStorage y los pinta en la tabla.
- * Incluye botones de Editar y Eliminar por cada fila.
- */
+// Funcion de renderizado para la tabla
 function mostrarDatos() {
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
   let tabla = document.getElementById("tablaDatos");
   tabla.innerHTML = "";
-
   datos.forEach(lead => {
-    tabla.innerHTML += `
+    tabla.innerHTML += 
       <tr>
-        <td>${lead.id}</td>
         <td>${lead.nombre}</td>
         <td>${lead.empresa}</td>
         <td>${lead.email}</td>
         <td>${lead.telefono}</td>
         <td>${lead.status}</td>
-        <td>
-          <img src="https://cdn-icons-png.flaticon.com/512/1827/1827933.png" width="20" style="cursor:pointer;" onclick="editar(${lead.id})" title="Editar" />
-          <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" width="20" style="cursor:pointer; margin-left:10px;" onclick="eliminar(${lead.id})" title="Eliminar" />
-        </td>
       </tr>
-    `;
+    ;
   });
 }
-
-// ── SEMANA 3: Eliminar ──
 /**
  * Elimina un lead por su ID de localStorage
  * y actualiza la tabla inmediatamente.
@@ -94,44 +73,11 @@ function mostrarDatos() {
 function eliminar(id) {
   const confirmar = confirm('¿Estás seguro de eliminar este prospecto?');
   if (!confirmar) return;
-
   let leads = cargarLeads();
   leads = leads.filter(lead => lead.id !== id);
   guardarLeads(leads);
   mostrarDatos();
 }
-
-// ── SEMANA 3: Editar ──
-/**
- * Busca el lead por ID en localStorage,
- * rellena el formulario con sus datos actuales
- * y borra ese lead para que al guardar se cree uno nuevo actualizado.
- */
-function editar(id) {
-  let leads = cargarLeads();
-
-  // 1. Encontrar el lead que se quiere editar
-  const lead = leads.find(lead => lead.id === id);
-  if (!lead) return;
-
-  // 2. Rellenar el formulario con los datos actuales del lead
-  document.getElementById('nombre').value   = lead.nombre;
-  document.getElementById('empresa').value  = lead.empresa;
-  document.getElementById('email').value    = lead.email;
-  document.getElementById('telefono').value = lead.telefono;
-  document.getElementById('status').value   = lead.status;
-
-  // 3. Eliminar el lead viejo de localStorage
-  //    Al hacer clic en "Guardar", se creará uno nuevo con los datos editados
-  leads = leads.filter(l => l.id !== id);
-  guardarLeads(leads);
-  mostrarDatos();
-
-  // 4. Llevar el scroll hacia arriba para que el usuario vea el formulario
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-
 // Semana 3 funciones para buscar, eliminar y editar
 // Funcion para buscar
 function buscar(){
@@ -139,14 +85,13 @@ function buscar(){
   let filtro = input.value.toUpperCase(); // Convertir a mayúsculas para búsqueda insensible a mayúsculas
   let tabla = document.getElementById("tablaDatos");
   let filas = tabla.getElementsByTagName("tr");
-
   // 2. Recorrer todas las filas (omitiendo la cabecera)
   for (let i = 1; i < filas.length; i++) {
       let celdaNombre = filas[i].getElementsByTagName("td")[0]; // Columna 0: Nombre
-      
+
       if (celdaNombre) {
           let textoValor = celdaNombre.textContent || celdaNombre.innerText;
-          
+
           // 3. Comprobar si el texto coincide
           if (textoValor.toUpperCase().indexOf(filtro) > -1) {
               filas[i].style.display = ""; // Mostrar
@@ -156,6 +101,5 @@ function buscar(){
       }
   }
 }
-
 // Ejecutar el metodo 
 mostrarDatos();
