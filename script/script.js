@@ -23,6 +23,11 @@ function guardarLeads(leads) {
 function validarcorreo() {
   const email = document.getElementById('email').value;
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regex.test(email)) {
+    alert('Por favor, ingresa un correo electrónico válido.');
+    return false;
+  }
+  return true;
 }
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
@@ -154,32 +159,3 @@ function buscar(){
 }
 // Ejecutar el metodo 
 mostrarDatos();
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let email = document.getElementById("email").value;
-  let error = document.getElementById("errorEmail");
-
-  // VALIDACIÓN
-  if(!validarcorreo(email)){
-    error.style.display = "block";
-    return; // ❌ NO guarda
-  } else {
-    error.style.display = "none";
-  }
-
-  let lead = {
-    id: Date.now(),
-    nombre: document.getElementById("nombre").value,
-    empresa: document.getElementById("empresa").value,
-    email: email,
-    telefono: document.getElementById("telefono").value,
-    status: document.getElementById("status").value
-  };
-
-  let datos = JSON.parse(localStorage.getItem("leads")) || [];
-  datos.push(lead);
-  localStorage.setItem("leads", JSON.stringify(datos));
-
-  form.reset();
-});
