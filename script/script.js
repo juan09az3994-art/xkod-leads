@@ -36,7 +36,7 @@ function validarcorreo() {
   }
 }
 function guardar() {
-  // ✅ VALIDAR PRIMERO
+  // Validar correo antes de guardar el lead
   if (!validarcorreo()) return;
 
   const nombre   = document.getElementById('nombre').value;
@@ -138,21 +138,15 @@ function buscar(){
   let tabla = document.getElementById("tabla");
   tabla.innerHTML = "";
 
-  // Si está vacío → mostrar todo
   if(filtro === ""){
     mostrarDatos();
     return;
   }
 
-  let filtrados = datos.filter(lead => {
-    let esNumero = !isNaN(filtro);
-
-    if(esNumero){
-      return lead.id.toString().includes(filtro);
-    } else {
-      return lead.nombre.toLowerCase().includes(filtro);
-    }
-  });
+  let filtrados = datos.filter(lead => 
+    lead.nombre.toLowerCase().includes(filtro) || 
+    lead.id.toString().includes(filtro)
+  );
 
   filtrados.forEach((lead) => {
     tabla.innerHTML += `
