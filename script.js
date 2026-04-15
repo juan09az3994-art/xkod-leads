@@ -72,6 +72,11 @@ function mostrarDatos() {
     `;
   });
 }
+
+}
+// Semana 3 funciones para buscar, eliminar y editar
+
+// ── SEMANA 3: Eliminar ──
 /**
  * Elimina un lead por su ID de localStorage
  * y actualiza la tabla inmediatamente.
@@ -79,12 +84,40 @@ function mostrarDatos() {
 function eliminar(id) {
   const confirmar = confirm('¿Estás seguro de eliminar este prospecto?');
   if (!confirmar) return;
+ 
   let leads = cargarLeads();
   leads = leads.filter(lead => lead.id !== id);
   guardarLeads(leads);
   mostrarDatos();
 }
-// Semana 3 funciones para buscar, eliminar y editar
+ 
+// ── SEMANA 3: Editar ──
+/**
+ * Busca el lead por ID, rellena el formulario con sus datos
+ * y lo elimina de localStorage para que al guardar se actualice.
+ */
+function editar(id) {
+  let leads = cargarLeads();
+ 
+  // 1. Encontrar el lead que se quiere editar
+  const lead = leads.find(lead => lead.id === id);
+  if (!lead) return;
+ 
+  // 2. Rellenar el formulario con los datos actuales del lead
+  document.getElementById('nombre').value   = lead.nombre;
+  document.getElementById('empresa').value  = lead.empresa;
+  document.getElementById('email').value    = lead.email;
+  document.getElementById('telefono').value = lead.telefono;
+  document.getElementById('status').value   = lead.status;
+ 
+  // 3. Eliminar el lead viejo de localStorage
+  leads = leads.filter(l => l.id !== id);
+  guardarLeads(leads);
+  mostrarDatos();
+ 
+  // 4. Subir el scroll para que el usuario vea el formulario
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 // Funcion para buscar
 function buscar(){
   let input = document.getElementById("buscador");
