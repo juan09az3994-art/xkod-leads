@@ -26,13 +26,14 @@ function guardarLeads(leads) {
    Se ejecuta al hacer clic en "Guardar Prospecto".
     Lee el formulario, crea el objeto y lo guarda.
  */
-function validar() {
-  const emailInput = document.getElementById('email').value;
-  if (document.getElementById('email').checkValidity()) {
-    alert("Email válido");
-  } else {
-    alert("Email inválido");
+function validarcorreo() {
+  const email = document.getElementById('email').value;
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regex.test(email)) {
+    alert('Por favor, ingresa un correo electrónico válido.');
+    return false;
   }
+  return true;
 }
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
@@ -53,7 +54,7 @@ function guardar() {
   const leads = cargarLeads();
   leads.push(nuevoLead);
   guardarLeads(leads);
-  validar();
+  validarcorreo();
 
   mostrarDatos() // Pinta el lead en la tabla inmediatamente
   document.getElementById('lead-form').reset();
