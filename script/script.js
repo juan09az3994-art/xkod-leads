@@ -32,7 +32,6 @@ function validarcorreo() {
     return false;
   } else {
     error.style.display = "none";
-    alert("Correo electrónico válido.");
     return true;
   }
 }
