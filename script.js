@@ -16,8 +16,8 @@ function validar() {
 // ── SEMANA 2: Capturar y guardar leads ──
 
 /**
- * Carga los leads guardados en localStorage.
- * Si no hay nada, devuelve un arreglo vacío.
+   Carga los leads guardados en localStorage.
+   Si no hay nada, devuelve un arreglo vacío.
  */
 function cargarLeads() {
   return JSON.parse(localStorage.getItem('leads')) || [];
@@ -31,8 +31,8 @@ function guardarLeads(leads) {
 }
 
 /**
- * Se ejecuta al hacer clic en "Guardar Prospecto".
- * Lee el formulario, crea el objeto y lo guarda.
+   Se ejecuta al hacer clic en "Guardar Prospecto".
+    Lee el formulario, crea el objeto y lo guarda.
  */
 function guardar() {
   const nombre   = document.getElementById('nombre').value;
