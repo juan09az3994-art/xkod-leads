@@ -4,6 +4,15 @@ localStorage.setItem('saludo', 'Hola Mundo');
 const resultado = localStorage.getItem('saludo');
 console.log(resultado);
 
+function validar() {
+  const emailInput = document.getElementById('email').value;
+  if (document.getElementById('email').checkValidity()) {
+    console.log("Email válido");
+  } else {
+    console.log("Email inválido");
+  }
+}
+
 // ── SEMANA 2: Capturar y guardar leads ──
 
 /**
@@ -109,4 +118,6 @@ function buscar(){
 }
 
 // Ejecutar el metodo 
+validar();
+
 mostrarDatos();
