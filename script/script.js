@@ -156,6 +156,7 @@ function buscar(){
       </tr>
     `;
   });
+  document.getElementById('buscador').reset();
 }
 // Ejecutar el metodo 
 mostrarDatos();
