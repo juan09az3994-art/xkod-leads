@@ -190,12 +190,12 @@ hr {
   text-transform: uppercase;
 }
 
-.badgePendiente {
+.badgependiente {
   color: rgba(241, 168, 168, 0.884);
   background:  red;
 }
 
-.badgeContactado {
+.badgecontactado {
   color: rgba(134, 239, 173, 0.719);
   background: green;
 }
