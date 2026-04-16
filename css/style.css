@@ -192,6 +192,7 @@ hr {
   border-radius: 50px;
   font-size: 12px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .badgePendiente {
