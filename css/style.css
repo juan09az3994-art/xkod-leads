@@ -176,7 +176,7 @@ hr {
 /*SEMANA 3 */
 #editar {
   filter: hue-rotate(180deg);
-  background-color: yellow;
+  background-image: yellow;
 }
 #eliminar {
   filter: hue-rotate(300deg);
@@ -201,7 +201,7 @@ hr {
   background: green;
 }
 
-.badgeNegociacion {
+.badgenegociacion {
   color: rgba(123, 176, 238, 0.993);
   background: rgb(5, 63, 189);
 }
