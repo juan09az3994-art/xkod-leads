@@ -22,18 +22,14 @@ function guardarLeads(leads) {
  */
 function validarcorreo() {
   const email = document.getElementById("email").value;
-  const error = document.getElementById("errorEmail");
-
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!regex.test(email)) {
-    error.style.display = "block";
     alert("Por favor, ingresa un correo electrónico válido.");
     return false;
-  } else {
-    error.style.display = "none";
-    return true;
   }
+
+  return true;
 }
 function guardar() {
   // Validar correo antes de guardar el lead
