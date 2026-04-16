@@ -77,7 +77,7 @@ function mostrarDatos() {
         <td>${lead.telefono}</td>
         <td>${lead.status}</td>
         <td>
-          <img class="editar" src="imagenes/Emoticons (2).png" width="30px" height="30px" style="cursor:pointer" onclick="editar(${lead.id})" title="Editar" />
+          <button class="editar" onclick="editar(${lead.id})" title="Editar"><img src="imagenes/Emoticons (2).png" width="30px" height="30px" /></button>
           <button class="eliminar" onclick="eliminar(${lead.id})" title="Eliminar"><img src="imagenes/Emoticons (1).png" width="30px" height="30px" /></button>
         </td>
       </tr>
