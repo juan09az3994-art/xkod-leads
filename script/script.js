@@ -77,8 +77,8 @@ function mostrarDatos() {
         <td>${lead.telefono}</td>
         <td>${lead.status}</td>
         <td>
-          <img class="editar" src="https://cdn-icons-png.flaticon.com/512/1827/1827933.png" width="50px" height="50px" style="cursor:pointer color: #3498db;" onclick="editar(${lead.id})" title="Editar" />
-          <img class="eliminar" src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" width="50px" height="50px" style="cursor:pointer color: #e74c3c; margin-left:10px;" onclick="eliminar(${lead.id})" title="Eliminar" />
+          <img class="editar" src="imagenes/Emoticons (2).png" width="50px" height="50px" style="cursor:pointer color: #3498db;" onclick="editar(${lead.id})" title="Editar" />
+          <img class="eliminar" src="imagenes/Emoticons (1).png" width="50px" height="50px" style="cursor:pointer color: #e74c3c; margin-left:10px;" onclick="eliminar(${lead.id})" title="Eliminar" />
         </td>
       </tr>
     `;
