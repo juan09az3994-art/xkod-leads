@@ -179,10 +179,11 @@ hr {
   color: red;
 }
 .status {
-      padding: 5px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 .statusPendiente { background: red; color: rgba(243, 18, 18, 0.2);}
 .statusContactado { background: green; color: rgba(46, 204, 113, 0.2); }
