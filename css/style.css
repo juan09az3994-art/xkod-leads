@@ -176,10 +176,15 @@ hr {
 #editar {
   filter: hue-rotate(180deg);
   background-image: yellow;
+  background: transparent;
+  border-radius: 0%;
+  transition: all 0.3s ease;
 }
 #eliminar {
   filter: hue-rotate(300deg);
   background-image: rgba(214, 19, 19, 0.39);
+  background: transparent;
+  border-radius: 0%;
 }
 .badge {
   display: inline-block;
