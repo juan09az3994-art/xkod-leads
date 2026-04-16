@@ -46,9 +46,6 @@
             <option value="Contactado">Contactado</option>
             <option value="En Negociación">En Negociación</option>
           </select>
-          <small id="errorEmail" style="color:red; display:none;">
-            Correo inválido
-          </small>
           <br>
           <hr>
           <button type="submit" onclick="guardar()">Guardar</button>
@@ -58,6 +55,7 @@
           <hr>
           <label for="buscador">Buscador</label>
           <input type="number" id="buscador-id" placeholder="Buscar por ID">
+          <button type="button" onclick="buscar()">Buscar</button>
           <h3>Ó</h3>
           <input type="text" id="buscador" placeholder="Buscar Nombre">
           <button type="button" onclick="buscar()">Buscar</button>
