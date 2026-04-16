@@ -71,7 +71,7 @@ function mostrarDatos() {
         <td>${lead.empresa}</td>
         <td>${lead.email}</td>
         <td>${lead.telefono}</td>
-        <td><span class="status ${lead.status}">${lead.status}</span></td>
+        <td><span class="badge badge${lead.status}">${lead.status}</span></td>
         <td>
           <button class="editar" onclick="editar(${lead.id})" title="Editar"><img src="imagenes/Emoticons (2).png" width="30px" height="30px" /></button>
           <button class="eliminar" onclick="eliminar(${lead.id})" title="Eliminar"><img src="imagenes/Emoticons (1).png" width="30px" height="30px" /></button>
