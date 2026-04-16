@@ -187,9 +187,9 @@ hr {
 }
 
 .badgePendiente { background: red; }
-.badgeContactado { background: green; }
+.badgeContactado { background: green; color: #2ecc71; }
 .badgeNegociacion { background: blue; }
-/* .badgeContactado  { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+/* .badgeContactado  { background: rgba(46, 204, 113, 0.2);  }
 .badgePendiente   { background: rgba(243, 156, 18, 0.2);  color: #f39c12; }
 .badgeNegociacion { background: rgba(52, 152, 219, 0.2);  color: #3498db; } */
 
