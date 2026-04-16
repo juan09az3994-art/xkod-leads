@@ -205,6 +205,60 @@ hr {
   background: rgb(5, 63, 189);
 }
 
+input[type="tel"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="tel"]:focus{
+    border-color: rgb(101, 217, 221);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="text"]:focus{
+    border-color: rgb(77, 31, 184);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="email"]:focus{
+    border-color: rgb(143, 184, 31);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+
+.panel {
+    background: var(--surface);
+    border-radius: 15px;
+    padding: 40px 20px;
+    box-shadow: var(--shadow);
+
+}
+
+input:invalid { border-color: red; }
+
+.container-buscador {
+  max-width: 860px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
