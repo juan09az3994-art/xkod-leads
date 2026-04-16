@@ -107,7 +107,7 @@ hr {
 .lead-form select option { background: var(--surface); }
 
 .lead-form button {
-  background: linear-gradient(135deg, #012553, #2e0101);
+  background: linear-gradient(135deg, var(--accent), var(--accent-h));
   color: white;
   border: none;
   padding: 12px 20px;
@@ -205,7 +205,6 @@ hr {
   color: rgba(123, 176, 238, 0.993);
   background: rgb(5, 63, 189);
 }
-
 
 
 @media (max-width: 600px) {
