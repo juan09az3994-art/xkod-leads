@@ -178,7 +178,7 @@ hr {
   filter: hue-rotate(300deg);
   color: red;
 }
-.status {
+.badge {
   padding: 5px;
   border-radius: 5px;
   font-weight: bold;
