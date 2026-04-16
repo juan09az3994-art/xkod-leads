@@ -174,7 +174,7 @@ hr {
 
 
 /*SEMANA 3 */
-.editar {
+#editar {
   filter: hue-rotate(180deg);
   background-color: yellow;
 }
