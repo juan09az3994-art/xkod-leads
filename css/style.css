@@ -186,12 +186,10 @@ hr {
   font-weight: 700;
 }
 
-.badgePendiente { background: red; }
-.badgeContactado { background: green; color: #2ecc71; }
-.badgeNegociacion { background: blue; }
-/* .badgeContactado  { background: rgba(46, 204, 113, 0.2);  }
-.badgePendiente   { background: rgba(243, 156, 18, 0.2);  color: #f39c12; }
-.badgeNegociacion { background: rgba(52, 152, 219, 0.2);  color: #3498db; } */
+.pendiente { background: red; color: rgba(243, 156, 18, 0.2);}
+.contactado { background: green; color: rgba(46, 204, 113, 0.2); }
+.negociacion { background: blue; color: rgba(52, 152, 219, 0.2); }
+
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
