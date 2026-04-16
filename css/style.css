@@ -1,16 +1,24 @@
 /*SEMANA 2*/
 :root {
-  --bg:       #2c3e50;
-  --surface:  #34495e;
-  --border:   rgba(255, 255, 255, 0.12);
-  --accent:   #3498db;
-  --accent-h: #2980b9;
-  --text:     #ffffff;
-  --muted:    #bdc3c7;
-  --dim:      #7f8c8d;
-  --radius:   10px;
-  --shadow:   0px 4px 10px rgba(0, 0, 0, 0.5);
-} 
+  --bg:       #fdf6f0;   /* fondo claro */
+  --surface:  #ffffff;   /* tarjetas */
+  --border:   rgba(0, 0, 0, 0.08);
+
+  --accent:   #a78bfa;   /* morado pastel */
+  --accent-h: #8b5cf6;
+
+  --text:     #374151;   /* gris oscuro */
+  --muted:    #6b7280;
+  --dim:      #9ca3af;
+
+  --radius:   12px;
+  --shadow:   0px 6px 15px rgba(0, 0, 0, 0.08);
+
+  /* STATUS */
+  --pendiente:   #fcd34d;  /* amarillo */
+  --contactado:  #86efac;  /* verde pastel */
+  --negociacion: #93c5fd;  /* azul pastel */
+}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -179,15 +187,28 @@ hr {
   background-color: rgba(214, 19, 19, 0.39);
 }
 .badge {
-  padding: 5px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
-.badgependiente { background: red; color: rgba(243, 18, 18, 0.2); }
-.badgecontactado { background: green; color: rgba(46, 204, 113, 0.2); }
-.badgenegociacion { background: blue; color: rgba(52, 152, 219, 0.2); }
+/* NUEVOS COLORES PASTEL */
+.badgePendiente {
+  background: rgba(252, 211, 77, 0.2);
+  color: #b45309;
+}
+
+.badgeContactado {
+  background: rgba(134, 239, 172, 0.2);
+  color: #166534;
+}
+
+.badgeNegociacion {
+  background: rgba(147, 197, 253, 0.2);
+  color: #1e3a8a;
+}
 
 
 
