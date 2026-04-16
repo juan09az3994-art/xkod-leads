@@ -184,7 +184,7 @@ hr {
 }
 .eliminar {
   filter: hue-rotate(300deg);
-  background-color: rgba(214, 19, 19, 0.39);
+  background-image: rgba(214, 19, 19, 0.39);
 }
 .badge {
   display: inline-block;
@@ -196,7 +196,7 @@ hr {
 }
 
 .badgePendiente {
-  color: rgba(252, 211, 77, 0.2);
+  color: rgba(145, 33, 5, 0.548);
   background:  red;
 }
 
@@ -206,7 +206,7 @@ hr {
 }
 
 .badgeNegociacion {
-  color: rgba(147, 197, 253, 0.2);
+  color: rgba(72, 155, 250, 0.363);
   background: rgb(5, 63, 189);
 }
 
