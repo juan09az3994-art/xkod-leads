@@ -1,18 +1,14 @@
 /*SEMANA 2*/
 :root {
-  --bg:       #fdf6f0;   /* fondo claro */
-  --surface:  #ffffff;   /* tarjetas */
-  --border:   rgba(0, 0, 0, 0.08);
-
-  --accent:   #a78bfa;   /* morado pastel */
-  --accent-h: #8b5cf6;
-
-  --text:     #374151;   /* gris oscuro */
-  --muted:    #6b7280;
-  --dim:      #9ca3af;
-
-  --radius:   12px;
-  --shadow:   0px 6px 15px rgba(0, 0, 0, 0.08);
+--bg: #2c3e50; --surface: #34495e;
+--border: rgba(255, 255, 255, 0.12); 
+--accent: #3498db; 
+--accent-h: #2980b9; 
+--text: #ffffff; 
+--muted: #bdc3c7; 
+--dim: #7f8c8d; 
+--radius: 10px; 
+--shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 
   /* STATUS */
   --pendiente:   #fcd34d;  /* amarillo */
@@ -182,7 +178,7 @@ hr {
   filter: hue-rotate(180deg);
   background-color: yellow;
 }
-.eliminar {
+#eliminar {
   filter: hue-rotate(300deg);
   background-image: rgba(214, 19, 19, 0.39);
 }
