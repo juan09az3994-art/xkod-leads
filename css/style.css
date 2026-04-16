@@ -192,17 +192,17 @@ hr {
 }
 
 .badgePendiente {
-  color: rgba(145, 33, 5, 0.548);
+  color: rgba(243, 113, 113, 0.884);
   background:  red;
 }
 
 .badgeContactado {
-  color: rgba(134, 239, 172, 0.2);
+  color: rgba(134, 239, 173, 0.719);
   background: green;
 }
 
 .badgeNegociacion {
-  color: rgba(72, 155, 250, 0.363);
+  color: rgba(123, 176, 238, 0.993);
   background: rgb(5, 63, 189);
 }
 
