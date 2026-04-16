@@ -172,11 +172,11 @@ hr {
 /*SEMANA 3 */
 .editar {
   filter: hue-rotate(180deg);
-  color: yellow;
+  background-color: yellow;
 }
 .eliminar {
   filter: hue-rotate(300deg);
-  color: red;
+  background-color: red;
 }
 .badge {
   padding: 5px;
