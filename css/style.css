@@ -184,9 +184,9 @@ hr {
       font-weight: bold;
     }
 
-.statuspendiente { background: red; color: rgba(243, 18, 18, 0.2);}
-.statuscontactado { background: green; color: rgba(46, 204, 113, 0.2); }
-.statusennegociacion { background: blue; color: rgba(52, 152, 219, 0.2); }
+.statusPendiente { background: red; color: rgba(243, 18, 18, 0.2);}
+.statusContactado { background: green; color: rgba(46, 204, 113, 0.2); }
+.statusNegociacion { background: blue; color: rgba(52, 152, 219, 0.2); }
 
 
 @media (max-width: 600px) {
