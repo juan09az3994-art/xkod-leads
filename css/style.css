@@ -185,9 +185,10 @@ hr {
   text-transform: uppercase;
 }
 
-.statusPendiente { background: red; color: rgba(243, 18, 18, 0.2);}
-.statusContactado { background: green; color: rgba(46, 204, 113, 0.2); }
-.statusNegociacion { background: blue; color: rgba(52, 152, 219, 0.2); }
+.badgependiente { background: red; color: rgba(243, 18, 18, 0.2); }
+.badgecontactado { background: green; color: rgba(46, 204, 113, 0.2); }
+.badgenegociacion { background: blue; color: rgba(52, 152, 219, 0.2); }
+
 
 
 @media (max-width: 600px) {
