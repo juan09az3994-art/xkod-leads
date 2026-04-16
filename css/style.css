@@ -10,10 +10,6 @@
 --radius: 10px; 
 --shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 
-  /* STATUS */
-  --pendiente:   #fcd34d;  /* amarillo */
-  --contactado:  #86efac;  /* verde pastel */
-  --negociacion: #93c5fd;  /* azul pastel */
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
