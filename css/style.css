@@ -183,7 +183,7 @@ hr {
 .leads-tabla tr:last-child td { border-bottom: none; }
 
 .leads-tabla tbody tr:nth-child(even) td {
-  background: rgba(212, 206, 206, 0.788);
+  background: rgba(206,229,213,1);
 }
 
 .leads-tabla  tbody tr:hover td {
