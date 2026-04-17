@@ -378,6 +378,13 @@ button[onclick="buscar()"] {
   margin-left: 10px;
 }
 
+button[onclick="limpiarBusqueda()"] {
+  background-color: var(--table-highlight);
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-left: 10px;
+}
+
 .editar,
 .eliminar{
    padding:4px;
