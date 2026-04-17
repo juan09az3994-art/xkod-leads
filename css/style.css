@@ -182,6 +182,10 @@ hr {
 .badgependiente   { background: red;  color: rgba(238, 143, 143, 0.945); }
 .badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
 
+input:invalid {
+  border-color: red;
+} 
+
 #eliminar-btn {
   background: transparent;
   border: none;
