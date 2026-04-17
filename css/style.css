@@ -103,12 +103,12 @@ hr {
 
 .lead-form input,
 .lead-form select {
-  background: #f5f5f5;
+  background: rgba(55, 107, 43, 0.4);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 5px;
   padding: 10px 14px;
   width: 100%;
   outline: none;
