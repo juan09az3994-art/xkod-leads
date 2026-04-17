@@ -162,7 +162,10 @@ function buscar(){
       </tr>
     `;
   });
-  document.getElementById('buscador').value = "";
+}
+function limpiarBusqueda() {
+  document.getElementById("buscador").value = "";
+  mostrarDatos();
 }
 
 // SEMANA 4: Mostrar datos al cargar la página
