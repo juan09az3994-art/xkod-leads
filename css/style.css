@@ -358,6 +358,7 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 button:hover {
   transform: scale(1.1);
   opacity: 0.8;
@@ -371,7 +372,7 @@ button[onclick="guardar()"] {
 }
 
 button[onclick="buscar()"] {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-light);
   border-radius: 8px;
   padding: 5px 15px;
   margin-left: 10px;
