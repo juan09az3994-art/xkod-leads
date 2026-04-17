@@ -169,6 +169,19 @@ hr {
 }
 
 /*SEMANA 3*/
+.leads-tabla th{
+ background:#113A58;
+ color:#ffffff;
+ font-size:13px;
+ font-weight:bold;
+
+ text-align:center;
+
+ padding:16px 12px;
+
+ border-bottom:3px solid #A9D3C5;
+}
+
 .badge {
   display: inline-block;
   padding: 3px 10px;
@@ -189,7 +202,6 @@ input:invalid {
 input:focus:invalid{
  box-shadow:0 0 5px red;
 }
-
 
 #eliminar-btn {
   background: transparent;
