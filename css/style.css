@@ -187,8 +187,8 @@ hr {
 }
 
 .leads-tabla  tbody tr:hover td {
-  background: rgba(55, 107, 43, 0.712);
-  color: #ffffff56;
+  background: rgba(55, 107, 43, 0.15);
+  color: #ffffff9c;
   transition: background 0.2s;
 }
 
@@ -215,7 +215,7 @@ button[onclick="buscar()"] {
 
 .leads-tabla th{
   background:#113A58;
-  color:#ffffff;
+  color:#cc4646;
   font-size:13px;
   font-weight:bold;
   text-align:center;
