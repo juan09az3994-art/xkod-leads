@@ -124,8 +124,8 @@ hr {
   border-radius: var(--radius);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 5px;
-  padding: 10px 5px;
+  font-size: 10px;
+  padding: 10px 12px;
   width: 100%;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -164,9 +164,27 @@ hr {
 /* Inputs específicos del formulario */
 label[for="nombre"]::after {
   content: " *";
-  color: red;
+  color: rgb(48, 123, 142);
   font-size: 12px;
 }
+label[for="telefono"]::after {
+  content: " *";
+  color: rgb(48, 123, 142);
+  font-size: 12px;
+}
+
+label[for="email"]::after {
+  content: " *";
+  color: rgb(48, 123, 142);
+  font-size: 12px;
+}
+
+label[for="estado"]::after {
+  content: " *";
+  color: rgb(48, 123, 142);
+  font-size: 12px;
+}
+
 input[type="text"]{
     width: 100%;
     padding: 15px;
@@ -179,6 +197,7 @@ input[type="text"]:focus{
     border-color: rgb(17, 52, 206);
     box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
 }
+
 input[type="tel"]{
     width: 100%;
     padding: 15px;
