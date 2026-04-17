@@ -108,6 +108,39 @@ hr {
   gap: 12px;
 }
 
+/* Grid responsivo para labels e inputs */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pantalla mediana - 2 columnas */
+@media (min-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Pantalla grande - 3 columnas */
+@media (min-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Centrar botón de guardar */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
 .lead-form label {
   font-size: 20px;
   font-weight: 600;
