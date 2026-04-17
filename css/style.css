@@ -197,7 +197,7 @@ input[type="text"]{
     outline: none;
 }
 input[type="text"]:focus{
-    border-color: rgb(17, 52, 206);
+    border-color: rgb(21, 131, 134);
     box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
 }
 
@@ -216,7 +216,7 @@ input[type="tel"]:focus{
 input[type="email"]{
     width: 100%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 1.1em;
     border: 2px solid #e0e0e0;
     transition: all 0.3s ease;
     outline: none;
@@ -244,6 +244,18 @@ input[type="submit"]{
 input[type="submit"]:hover  { background: var(--accent-h); transform: scale(1.02); }
 input[type="submit"]:active { transform: scale(0.98); }
 
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+select:focus {
+    border-color: rgb(14, 186, 238);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
 /*=============================================
 =                  TABLA                      =
 =============================================*/
