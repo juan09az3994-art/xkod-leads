@@ -144,7 +144,7 @@ hr {
 
 .lead-form br { display: none; }
 
-.lead-form select option { background: var(--surface); }
+.lead-form select option { background: var(--bg-soft); color: #120924; }
 
 .lead-form button {
   background: var(--accent);
