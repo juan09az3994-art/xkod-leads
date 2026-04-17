@@ -326,9 +326,24 @@ input[type="submit"]{
 input[type="submit"]:hover  { background: var(--accent-h); transform: scale(1.02); }
 input[type="submit"]:active { transform: scale(0.98); }
 h1 {
-      text-align: center;
-      color: #38bdf8;
-    }
+  text-align: center;
+  color: #38bdf8;
+}
+.panel{
+   overflow:hidden; /* evita que se salga visualmente */
+}
+
+.table-scroll{
+   width:100%;
+   overflow-x:auto;
+   display:block;
+}
+
+.leads-tabla{
+   width:100%;
+   table-layout:auto;
+   border-collapse:collapse;
+}
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
