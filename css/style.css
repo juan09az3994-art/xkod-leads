@@ -354,6 +354,12 @@ h1 {
 .eliminar{
    padding:4px;
 }
+td:last-child{
+ display:flex;
+ gap:6px;
+ justify-content:center;
+ align-items:center;
+}
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
   .header p  { border-left: none; padding-left: 0; }
