@@ -187,7 +187,7 @@ hr {
 }
 
 .leads-tabla  tbody tr:hover td {
-  background: rgba(55, 107, 43, 0.15);
+  background: rgba(55, 107, 43, 0.712);
   color: #ffffff56;
   transition: background 0.2s;
 }
