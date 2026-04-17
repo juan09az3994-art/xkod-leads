@@ -228,6 +228,39 @@ hr {
   outline: none;
   box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
 }
+
+.container-buscador {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+input, select {
+  background: #334155;
+  color: white;
+}
+
+ th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #334155;
+}
+
+tr:nth-child(even) {
+  background: #0f172a;
+}
+
+
 input[type="text"]{
     width: 100%;
     padding: 15px;
@@ -237,7 +270,7 @@ input[type="text"]{
     outline: none;
 }
 input[type="text"]:focus{
-    border-color: cadetblue;
+    border-color: rgb(17, 52, 206);
     box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
 }
 input[type="tel"]{
