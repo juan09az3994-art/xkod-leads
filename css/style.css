@@ -127,18 +127,18 @@ hr {
   border: 1px solid var(--border);
 }
 
-.leads-table {
+.leads-tabla {
   width: 100%;
   border-collapse: collapse;
   font-size: 13.5px;
   border: none !important;
 }
 
-.leads-table thead {
+.leads-tabla thead {
   background: var(--bg);
 }
 
-.leads-table th {
+.leads-tabla th {
   padding: 12px 16px;
   text-align: left;
   font-size: 11px;
@@ -149,20 +149,20 @@ hr {
   border-bottom: 2px solid var(--accent);
 }
 
-.leads-table td {
+.leads-tabla td {
   padding: 13px 16px;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   vertical-align: middle;
 }
 
-.leads-table tr:last-child td { border-bottom: none; }
+.leads-tabla tr:last-child td { border-bottom: none; }
 
-.leads-table tbody tr:nth-child(even) td {
+.leads-tabla tbody tr:nth-child(even) td {
   background: rgba(0, 0, 0, 0.15);
 }
 
-.leads-table tbody tr:hover td {
+.leads-tabla  tbody tr:hover td {
   background: rgba(55, 107, 43, 0.15);
   color: #ffffff;
   transition: background 0.2s;
@@ -182,6 +182,116 @@ hr {
 .badgependiente   { background: red;  color: rgba(238, 143, 143, 0.945); }
 .badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
 
+#eliminar-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+#eliminar-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+#eliminar-btn:active {
+  background: var(--accent-h);
+  color: white;
+}
+#eliminar-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
+}
+#editar-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+#editar-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+#editar-btn:active {
+  background: var(--accent-h);
+  color: white;
+}
+#editar-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
+}
+input[type="text"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="text"]:focus{
+    border-color: cadetblue;
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+input[type="tel"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="tel"]:focus{
+    border-color: rgb(106, 12, 134);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+input[type="email"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="email"]:focus{
+    border-color: rgb(238, 14, 171);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+#imagenlogo{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 20px auto 0 auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+#imagenlogo:hover{
+    transform: scale(1.05);
+}
+input[type="submit"]{
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 10px rgba(55, 107, 43, 0.4);
+}
+input[type="submit"]:hover  { background: var(--accent-h); transform: scale(1.02); }
+input[type="submit"]:active { transform: scale(0.98); }
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
   .header p  { border-left: none; padding-left: 0; }
