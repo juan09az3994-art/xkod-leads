@@ -179,7 +179,7 @@ hr {
 }
 
 .badgecontactado  { background: green; color: rgba(170, 247, 155, 0.685); }
-.badgependiente   { background: red;  color: rgba(238, 143, 143, 0.74); }
+.badgependiente   { background: red;  color: rgba(238, 143, 143, 0.945); }
 .badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
 
 @media (max-width: 600px) {
