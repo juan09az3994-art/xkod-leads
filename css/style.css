@@ -178,9 +178,9 @@ hr {
   text-transform: uppercase;
 }
 
-.badgecontactado  { background: rgba(169, 211, 197, 0.2); color: #A9D3C5; }
-.badgependiente   { background: rgba(206, 229, 213, 0.2);  color: #CEE5D5; }
-.badgenegociacion { background: rgb(2, 2, 75);  color: rgba(48, 123, 142, 0.2); }
+.badgecontactado  { background: green; color: rgba(170, 247, 155, 0.685); }
+.badgependiente   { background: red;  color: rgba(238, 143, 143, 0.74); }
+.badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
