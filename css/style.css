@@ -445,6 +445,7 @@ input, select, button {
   border-radius: 8px;
   border: none;
   font-size: 14px;
+  text-align: left;
 }
 
 input, select {
