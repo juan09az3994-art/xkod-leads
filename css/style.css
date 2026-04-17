@@ -183,8 +183,11 @@ hr {
 
 .leads-tabla tr:last-child td { border-bottom: none; }
 
+.leads-tabla tbody tr:nth-child(odd) td{
+   background:rgba(169, 211, 197, 0.8);
+}
 .leads-tabla tbody tr:nth-child(even) td {
-  background: rgba(206,229,213,1);
+  background: rgba(206,229,213,0.8);
 }
 
 .leads-tabla  tbody tr:hover td {
@@ -237,14 +240,16 @@ button[onclick="buscar()"] {
 .badgependiente   { background: red;  color: rgba(238, 143, 143, 0.945); }
 .badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
 
+/* Validación de formularios */
 input:invalid {
   border-color: red;
   border: 2px solid red;
 }
+
 input:focus:invalid{
  box-shadow:0 0 5px red;
 }
-
+/* Botones de acción */
 #eliminar-btn {
   background: transparent;
   border: none;
@@ -292,6 +297,7 @@ input:focus:invalid{
   box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
 }
 
+/* Buscador */
 .container-buscador {
     display: flex;
     justify-content: center;
@@ -359,18 +365,6 @@ input[type="email"]{
 input[type="email"]:focus{
     border-color: rgb(238, 14, 171);
     box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
-}
-#imagenlogo{
-    max-width: 300px;
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 20px auto 0 auto;
-    display: block;
-    transition: all 0.3s ease;
-}
-#imagenlogo:hover{
-    transform: scale(1.05);
 }
 
 input[type="submit"]{
