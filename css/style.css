@@ -162,6 +162,11 @@ hr {
 .lead-form button:active { transform: scale(0.98); }
 
 /* Inputs específicos del formulario */
+label[for="nombre"]::after {
+  content: " *";
+  color: red;
+  font-size: 12px;
+}
 input[type="text"]{
     width: 100%;
     padding: 15px;
