@@ -132,6 +132,7 @@ hr {
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   margin-bottom: 0.5rem;
+  text-transform: capitalize;
 }
 
 .lead-form input::placeholder { color: var(--dim); }
