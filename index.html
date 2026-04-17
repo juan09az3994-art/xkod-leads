@@ -58,12 +58,13 @@
           <hr>
           <h2>Buscador</h2>
           <hr>
-          <br>
-          <label for="buscador">Buscar:</label>
-          <input type="text" id="buscador" placeholder="Buscar por ID o Nombre">
-          <div class="form-actions">
-            <button type="button" onclick="buscar()"><img src="imagenes/Emoticons (3).png" alt="search" width="50px" height="50px"></button>
-            <button type="button" onclick="limpiarBusqueda()"><img src="imagenes/Emoticons (6).png" alt="clear" width="50px" height="50px"></button>
+          <div class="buscador-row">
+            <label for="buscador" class="buscador-label">Buscar:</label>
+            <input type="text" id="buscador" placeholder="Buscar por ID o Nombre">
+            <div class="form-actions buscador-actions">
+              <button type="button" onclick="buscar()"><img src="imagenes/Emoticons (3).png" alt="search" width="50px" height="50px"></button>
+              <button type="button" onclick="limpiarBusqueda()"><img src="imagenes/Emoticons (6).png" alt="clear" width="50px" height="50px"></button>
+            </div>
           </div>
         </div>
       </form>
