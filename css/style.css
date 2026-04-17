@@ -1,15 +1,15 @@
 /*SEMANA 2*/
 :root {
---bg: #2c3e50; --surface: #34495e;
---border: rgba(255, 255, 255, 0.12); 
---accent: #3498db; 
---accent-h: #2980b9; 
---text: #ffffff; 
---muted: #bdc3c7; 
---dim: #7f8c8d; 
---radius: 10px; 
---shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-
+  --bg:       #113A58;
+  --surface:  #307B8E;
+  --border:   rgba(255, 255, 255, 0.12);
+  --accent:   #376B2B;
+  --accent-h: #2a5422;
+  --text:     #CEE5D5;
+  --muted:    #A9D3C5;
+  --dim:      #6a9e8e;
+  --radius:   10px;
+  --shadow:   0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -78,10 +78,10 @@ hr {
 
 .lead-form input,
 .lead-form select {
-  background: #f9fafb;
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  color: #374151;
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   padding: 10px 14px;
@@ -95,18 +95,15 @@ hr {
 .lead-form input:focus,
 .lead-form select:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+  box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
 }
 
 .lead-form br { display: none; }
 
-.lead-form select option {
-  background: var(--surface);
-  color: white;
-}
+.lead-form select option { background: var(--surface); }
 
 .lead-form button {
-  background: linear-gradient(135deg, var(--accent), var(--accent-h));
+  background: var(--accent);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -117,7 +114,7 @@ hr {
   font-weight: 700;
   width: 100%;
   transition: background 0.3s, transform 0.2s;
-  box-shadow: 0px 4px 10px rgba(52, 152, 219, 0.4);
+  box-shadow: 0px 4px 10px rgba(55, 107, 43, 0.4);
 }
 
 .lead-form button:hover  { background: var(--accent-h); transform: scale(1.02); }
@@ -130,7 +127,7 @@ hr {
   border: 1px solid var(--border);
 }
 
-.leads-tabla {
+.leads-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13.5px;
@@ -141,7 +138,7 @@ hr {
   background: var(--bg);
 }
 
-.leads-tabla th {
+.leads-table th {
   padding: 12px 16px;
   text-align: left;
   font-size: 11px;
@@ -152,123 +149,41 @@ hr {
   border-bottom: 2px solid var(--accent);
 }
 
-.leads-tabla td {
+.leads-table td {
   padding: 13px 16px;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   vertical-align: middle;
 }
 
-.leads-tabla tr:last-child td { border-bottom: none; }
+.leads-table tr:last-child td { border-bottom: none; }
 
-.leads-tabla tbody tr:nth-child(even) td {
+.leads-table tbody tr:nth-child(even) td {
   background: rgba(0, 0, 0, 0.15);
 }
 
-.leads-tabla tbody tr:hover td {
-  background: rgba(167, 139, 250, 0.1);
+.leads-table tbody tr:hover td {
+  background: rgba(55, 107, 43, 0.15);
   color: #ffffff;
   transition: background 0.2s;
 }
 
-
-/*SEMANA 3 */
-#editar {
-  filter: hue-rotate(180deg);
-  background-image: yellow;
-  background: transparent;
-  border-radius: 0%;
-  transition: all 0.3s ease;
-}
-#eliminar {
-  filter: hue-rotate(300deg);
-  background-image: rgba(214, 19, 19, 0.39);
-  background: transparent;
-  border-radius: 0%;
-}
+/*SEMANA 3*/
 .badge {
   display: inline-block;
-  padding: 5px 12px;
+  padding: 3px 10px;
   border-radius: 50px;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
-.badgependiente {
-  color: rgba(241, 168, 168, 0.884);
-  background:  red;
-}
-
-.badgecontactado {
-  color: rgba(134, 239, 173, 0.719);
-  background: green;
-}
-
-.badgenegociacion {
-  color: rgba(123, 176, 238, 0.993);
-  background: rgb(5, 63, 189);
-}
-
-input[type="tel"]{
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1em;
-    border: 2px solid #e0e0e0;
-    transition: all 0.3s ease;
-    outline: none;
-}
-input[type="tel"]:focus{
-    border-color: rgb(101, 217, 221);
-    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
-}
-
-input[type="text"]{
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1em;
-    border: 2px solid #e0e0e0;
-    transition: all 0.3s ease;
-    outline: none;
-}
-input[type="text"]:focus{
-    border-color: rgb(77, 31, 184);
-    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
-}
-
-input[type="email"]{
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1em;
-    border: 2px solid #e0e0e0;
-    transition: all 0.3s ease;
-    outline: none;
-}
-input[type="email"]:focus{
-    border-color: rgb(143, 184, 31);
-    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
-}
-
-.panel {
-    background: var(--surface);
-    border-radius: 15px;
-    padding: 40px 20px;
-    box-shadow: var(--shadow);
-
-}
-
-input:invalid { border-color: red; }
-
-.container-buscador {
-  max-width: 860px;
-  margin: 0 auto 30px;
-  padding: 0 20px;
-  border-left: green 2px solid var(--border);
-}
+.badgeContactado  { background: rgba(169, 211, 197, 0.2); color: #A9D3C5; }
+.badgePendiente   { background: rgba(206, 229, 213, 0.2);  color: #CEE5D5; }
+.badgeNegociacion { background: rgba(48, 123, 142, 0.2);  color: #307B8E; }
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
   .header p  { border-left: none; padding-left: 0; }
   .container { padding: 0 12px; margin: 16px auto; }
   .panel     { padding: 16px; }
-} 
+}
