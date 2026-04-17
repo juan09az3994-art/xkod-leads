@@ -15,7 +15,7 @@
   --accent-green: #376B2B;   /* Verde Bosque (Guardar/Confirmar) */
   --bg-soft: #CEE5D5;        /* Verde muy claro (Fondo general) */
   --table-highlight: #A9D3C5; /* Verde menta (Filas/Bordes) */
-  --white: #f3e7e7f3;
+  --white: #fffffff3;
 }
 
 *, *::before, *::after { 
