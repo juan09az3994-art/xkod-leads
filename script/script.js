@@ -164,5 +164,25 @@ function buscar(){
   });
   document.getElementById('buscador').value = "";
 }
+
+// SEMANA 4: Mostrar datos al cargar la página
+// function exportarCSV() {
+//   let datos = JSON.parse(localStorage.getItem("leads")) || [];
+
+//   let csv = "Id,Nombre,Empresa,Email,Telefono,Status\n";
+
+//   datos.forEach(lead => {
+//     csv += `${lead.id},${lead.nombre},${lead.empresa},${lead.email},${lead.telefono},${lead.status}\n`;
+//   });
+
+//   let blob = new Blob([csv], { type: "text/csv" });
+//   let url = URL.createObjectURL(blob);
+
+//   let a = document.createElement("a");
+//   a.href = url;
+//   a.download = "leads.csv";
+//   a.click();
+// }
+
 // Ejecutar el metodo 
 mostrarDatos();
