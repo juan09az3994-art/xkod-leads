@@ -404,9 +404,6 @@ td:last-child{
  align-items:center;
 }
 
-.panel{
-  background-color: white;
-}
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
