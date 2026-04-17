@@ -1,3 +1,27 @@
+/* Layout para el buscador */
+.buscador-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.buscador-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-right: 8px;
+  min-width: 60px;
+}
+
+.buscador-row input[type="text"] {
+  flex: 1 1 250px;
+  max-width: 400px;
+}
+
+.buscador-actions {
+  gap: 12px;
+}
 /*=============================================
 =                    VARIABLES                 =
 =============================================*/
