@@ -5,7 +5,7 @@
   --border:   rgba(255, 255, 255, 0.12);
   --accent:   #376B2B;
   --accent-h: #2a5422;
-  --text:     #092411;
+  --text:     #120924;
   --muted:    #A9D3C5;
   --dim:      #6a9e8e;
   --radius:   10px;
@@ -188,7 +188,7 @@ hr {
 
 .leads-tabla  tbody tr:hover td {
   background: rgba(55, 107, 43, 0.15);
-  color: #ffffff;
+  color: #ffffff56;
   transition: background 0.2s;
 }
 
