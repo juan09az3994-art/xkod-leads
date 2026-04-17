@@ -74,6 +74,7 @@ function mostrarDatos() {
         <td><span class="badge badge${lead.status}">${lead.status}</span></td>
         <td>
           <button class="editar" onclick="editar(${lead.id})" title="Editar"><img src="imagenes/Emoticons (2).png" width="30px" height="30px" /></button>
+          <br>
           <button class="eliminar" onclick="eliminar(${lead.id})" title="Eliminar"><img src="imagenes/Emoticons (1).png" width="30px" height="30px" /></button>
         </td>
       </tr>
@@ -155,6 +156,7 @@ function buscar(){
         <td><span class="badge badge${lead.status}">${lead.status}</span></td>
         <td>
           <button class="editar" onclick="editar(${lead.id})" title="Editar"><img src="imagenes/Emoticons (2).png" width="30px" height="30px" /></button>
+          <br>
           <button class="eliminar" onclick="eliminar(${lead.id})" title="Eliminar"><img src="imagenes/Emoticons (1).png" width="30px" height="30px" /></button>
         </td>
       </tr>
