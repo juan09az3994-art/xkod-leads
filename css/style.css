@@ -141,6 +141,29 @@ hr {
   margin-top: 16px;
 }
 
+.form-actions button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-actions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.form-actions button:active {
+  transform: scale(0.95);
+}
+
 .lead-form label {
   font-size: 20px;
   font-weight: 600;
