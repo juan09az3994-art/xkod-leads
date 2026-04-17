@@ -175,11 +175,12 @@ hr {
   border-radius: 50px;
   font-size: 11.5px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.badgeContactado  { background: rgba(169, 211, 197, 0.2); color: #A9D3C5; }
-.badgePendiente   { background: rgba(206, 229, 213, 0.2);  color: #CEE5D5; }
-.badgeNegociacion { background: rgba(48, 123, 142, 0.2);  color: #307B8E; }
+.badgecontactado  { background: rgba(169, 211, 197, 0.2); color: #A9D3C5; }
+.badgependiente   { background: rgba(206, 229, 213, 0.2);  color: #CEE5D5; }
+.badgenegociacion { background: rgb(2, 2, 75);  color: rgba(48, 123, 142, 0.2); }
 
 @media (max-width: 600px) {
   .header    { flex-direction: column; gap: 8px; padding: 14px; }
