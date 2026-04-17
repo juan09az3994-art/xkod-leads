@@ -352,7 +352,7 @@ input[type="tel"]{
 }
 input[type="tel"]:focus{
     border-color: rgb(106, 12, 134);
-    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.5);
 }
 input[type="email"]{
     width: 100%;
