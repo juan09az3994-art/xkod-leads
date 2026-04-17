@@ -256,6 +256,7 @@ select {
     border: 2px solid #e0e0e0;
     transition: all 0.3s ease;
     outline: none;
+    background-color: white;
 }
 select:focus {
     border-color: rgb(14, 186, 238);
