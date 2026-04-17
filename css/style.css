@@ -187,7 +187,7 @@ hr {
    background:rgba(169, 211, 197, 0.8);
 }
 .leads-tabla tbody tr:nth-child(even) td {
-  background: rgba(206,229,213,0.8);
+  background: rgba(206,229,213,0.5);
 }
 
 .leads-tabla  tbody tr:hover td {
