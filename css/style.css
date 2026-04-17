@@ -170,6 +170,11 @@ label[for="nombre"]::after {
   color: rgb(48, 123, 142);
   font-size: 12px;
 }
+label[for="empresa"]::after {
+  content: " *";
+  color: rgb(48, 123, 142);
+  font-size: 12px;
+}
 label[for="telefono"]::after {
   content: " *";
   color: rgb(48, 123, 142);
@@ -182,7 +187,7 @@ label[for="email"]::after {
   font-size: 12px;
 }
 
-label[for="estado"]::after {
+label[for="status"]::after {
   content: " *";
   color: rgb(48, 123, 142);
   font-size: 12px;
