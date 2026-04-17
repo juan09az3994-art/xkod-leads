@@ -233,7 +233,7 @@ input[type="submit"]{
     padding: 12px 20px;
     border-radius: var(--radius);
     cursor: pointer;
-    font-size: 14px;
+    font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     width: 100%;
