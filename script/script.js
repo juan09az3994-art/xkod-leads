@@ -187,5 +187,11 @@ function limpiarBusqueda() {
 //   a.click();
 // }
 
+// function reiniciarDatos() {
+//   const confirmar = confirm('¿Estás seguro de reiniciar todos los datos? Esta acción no se puede deshacer.');
+//   if (!confirmar) return;
+//   localStorage.removeItem('leads');
+//   mostrarDatos();
+// } 
 // Ejecutar el metodo 
 mostrarDatos();
