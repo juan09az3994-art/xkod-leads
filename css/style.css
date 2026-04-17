@@ -105,7 +105,7 @@ hr {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  color: var(--bg-soft);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   padding: 10px 14px;
@@ -183,7 +183,7 @@ hr {
 .leads-tabla tr:last-child td { border-bottom: none; }
 
 .leads-tabla tbody tr:nth-child(even) td {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(202, 115, 115, 0.15);
 }
 
 .leads-tabla  tbody tr:hover td {
