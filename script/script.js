@@ -183,7 +183,7 @@ function exportarCSV() {
 
   let a = document.createElement("a");
   a.href = url;
-  a.download = "leads.csv";
+  a.download = "tabla_de_datos.csv";
   a.click();
 }
 
