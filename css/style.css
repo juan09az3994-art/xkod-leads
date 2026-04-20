@@ -497,6 +497,13 @@ button[onclick="limpiarBusqueda()"] {
   margin-left: 10px;
 }
 
+button[onclick="exportarCSV()"] {
+  background-color: var(--primary-light);
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-left: 10px;
+}
+
 .editar,
 .eliminar{
    padding:4px;
