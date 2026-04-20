@@ -134,7 +134,32 @@ alerta y devuelve `false` para detener el guardado.
 
 ### `guardar()`
 ```javascript
-function guardar() { ... }
+function guardar() {
+  // Validar correo antes de guardar el lead
+  if (!validarcorreo()) return;
+
+  const nombre   = document.getElementById('nombre').value;
+  const empresa  = document.getElementById('empresa').value;
+  const email    = document.getElementById('email').value;
+  const telefono = document.getElementById('telefono').value;
+  const status   = document.getElementById('status').value;
+
+  const nuevoLead = {
+    id:       Date.now(),
+    nombre:   nombre,
+    empresa:  empresa,
+    email:    email,
+    telefono: telefono,
+    status:   status,
+  };
+
+  const leads = cargarLeads();
+  leads.push(nuevoLead);
+  guardarLeads(leads);
+
+  mostrarDatos();
+  document.getElementById('lead-form').reset();
+}
 ```
 **¿Qué hace?** Es la función principal que se ejecuta al hacer clic en 
 el botón "Guardar". Realiza estos pasos en orden:
@@ -151,7 +176,29 @@ el botón "Guardar". Realiza estos pasos en orden:
 
 ### `mostrarDatos()`
 ```javascript
-function mostrarDatos() { ... }
+function mostrarDatos() {
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
+  let tabla = document.getElementById("tablaDatos");
+  tabla.innerHTML = "";
+ 
+  datos.forEach(lead => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${lead.id}</td>
+        <td>${lead.nombre}</td>
+        <td>${lead.empresa}</td>
+        <td>${lead.email}</td>
+        <td>${lead.telefono}</td>
+        <td><span class="badge badge${lead.status}">${lead.status}</span></td>
+        <td>
+          <button class="editar" onclick="editar(${lead.id})" title="Editar"><img src="imagenes/Emoticons (2).png" width="30px" height="30px" /></button>
+          <br>
+          <button class="eliminar" onclick="eliminar(${lead.id})" title="Eliminar"><img src="imagenes/Emoticons (1).png" width="30px" height="30px" /></button>
+        </td>
+      </tr>
+    `;
+  });
+}
 ```
 **¿Qué hace?** Lee todos los leads de localStorage y los pinta en la 
 tabla del HTML. Primero limpia el contenido actual de la tabla con 
@@ -166,7 +213,24 @@ eliminar un lead para mantener la tabla siempre actualizada.
 
 ### `editar(id)`
 ```javascript
-function editar(id) { ... }
+function editar(id) {
+  let leads = cargarLeads();
+ 
+  // 1. Encontrar el lead que se quiere editar
+  const lead = leads.find(lead => lead.id === id);
+  if (!lead) return;
+ 
+  // 2. Rellenar el formulario con los datos actuales del lead
+  document.getElementById('nombre').value   = lead.nombre;
+  document.getElementById('empresa').value  = lead.empresa;
+  document.getElementById('email').value    = lead.email;
+  document.getElementById('telefono').value = lead.telefono;
+  document.getElementById('status').value   = lead.status;
+ 
+  // 3. Eliminar el lead viejo de localStorage
+  leads = leads.filter(l => l.id !== id);
+  guardarLeads(leads);
+  mostrarDatos();
 ```
 **¿Qué hace?** Recibe el ID del lead a editar y realiza estos pasos:
 1. Busca el lead en el arreglo con `leads.find()`
@@ -194,7 +258,41 @@ function eliminar(id) { ... }
 
 ### `buscar()`
 ```javascript
-function buscar() { ... }
+function buscar(){
+  let filtro = document.getElementById("buscador").value.toLowerCase();
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
+
+  let tabla = document.getElementById("tablaDatos");
+  tabla.innerHTML = "";
+
+  if(filtro === ""){
+    mostrarDatos();
+    return;
+  }
+
+  let filtrados = datos.filter(lead => 
+    lead.nombre.toLowerCase().includes(filtro) || 
+    lead.id.toString().includes(filtro)
+  );
+
+  filtrados.forEach((lead) => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${lead.id}</td>
+        <td>${lead.nombre}</td>
+        <td>${lead.empresa}</td>
+        <td>${lead.email}</td>
+        <td>${lead.telefono}</td>
+        <td><span class="badge badge${lead.status}">${lead.status}</span></td>
+        <td>
+          <button class="editar" onclick="editar(${lead.id})" title="Editar"><img src="imagenes/Emoticons (2).png" width="30px" height="30px" /></button>
+          <br>
+          <button class="eliminar" onclick="eliminar(${lead.id})" title="Eliminar"><img src="imagenes/Emoticons (1).png" width="30px" height="30px" /></button>
+        </td>
+      </tr>
+    `;
+  });
+}
 ```
 **¿Qué hace?** Lee el texto del campo buscador y filtra los leads 
 que coincidan por nombre o por ID. Usa `toLowerCase()` para que la 
