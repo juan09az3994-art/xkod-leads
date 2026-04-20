@@ -244,7 +244,15 @@ function editar(id) {
 
 ### `eliminar(id)`
 ```javascript
-function eliminar(id) { ... }
+function eliminar(id) {
+  const confirmar = confirm('¿Estás seguro de eliminar este prospecto?');
+  if (!confirmar) return;
+ 
+  let leads = cargarLeads();
+  leads = leads.filter(lead => lead.id !== id);
+  guardarLeads(leads);
+  mostrarDatos();
+}
 ```
 **¿Qué hace?** Recibe el ID del lead a eliminar y realiza estos pasos:
 1. Muestra una ventana de confirmación con `confirm()` para evitar 
@@ -303,7 +311,23 @@ está vacío, llama a `mostrarDatos()` para mostrar todos los leads.
 
 ### `exportarCSV()`
 ```javascript
-function exportarCSV() { ... }
+function exportarCSV() {
+  let datos = JSON.parse(localStorage.getItem("leads")) || [];
+
+  let csv = "Id,Nombre,Empresa,Email,Telefono,Status\n";
+
+  datos.forEach(lead => {
+    csv += `${lead.id},${lead.nombre},${lead.empresa},${lead.email},${lead.telefono},${lead.status}\n`;
+  });
+
+  let blob = new Blob([csv], { type: "text/csv" });
+  let url = URL.createObjectURL(blob);
+
+  let a = document.createElement("a");
+  a.href = url;
+  a.download = "tabla_de_datos.csv";
+  a.click();
+}
 ```
 **¿Qué hace?** Genera un archivo `.csv` con todos los leads guardados 
 y lo descarga automáticamente. Construye el texto del archivo con los 
