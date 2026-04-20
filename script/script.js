@@ -193,5 +193,22 @@ function limpiarBusqueda() {
 //   localStorage.removeItem('leads');
 //   mostrarDatos();
 // } 
+
+// function descargarpdf() {
+//   const { jsPDF } = window.jspdf;
+//   const doc = new jsPDF();
+//   let leads = cargarLeads();
+
+//   doc.text("Lista de Leads", 10, 10);
+//   let y = 20;
+//   leads.forEach(lead => {
+//     doc.text(`ID: ${lead.id} | Nombre: ${lead.nombre} | Empresa: ${lead.empresa} | Email: ${lead.email} | Teléfono: ${lead.telefono} | Status: ${lead.status}`, 10, y);
+//     y += 10;
+//   });
+
+//   doc.save("leads.pdf");
+// }
+
+
 // Ejecutar el metodo 
 mostrarDatos();
