@@ -498,10 +498,11 @@ button[onclick="limpiarBusqueda()"] {
 }
 
 button[onclick="exportarCSV()"] {
-  background-color: var(--primary-light);
+  background-color: var(--primary-dark);
   border-radius: 8px;
   padding: 5px 15px;
   margin-left: 10px;
+  align-self: center;
 }
 
 .editar,
