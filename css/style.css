@@ -504,7 +504,7 @@ button[onclick="limpiarBusqueda()"] {
 }
 
 button[onclick="exportarCSV()"] {
-  background-color: purple;
+  background-color: rgba(109, 17, 109, 0.74);
   border-radius: 8px;
   padding: 5px 15px;
   margin-left: 10px;
