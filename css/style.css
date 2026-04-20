@@ -123,6 +123,12 @@ hr {
   margin: 14px 0;
 }
 
+botones{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
+
 /*=============================================
 =                FORMULARIO                   =
 =============================================*/
