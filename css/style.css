@@ -506,7 +506,7 @@ button[onclick="limpiarBusqueda()"] {
 }
 
 button[onclick="exportarCSV()"] {
-  background: linear-gradient(45deg, #307B8E, #113A58, #A9D3C5, #376B2B);
+  background: transparent;
   border-radius: 50%;
   border: none;
   padding: 10px;
