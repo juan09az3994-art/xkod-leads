@@ -504,11 +504,18 @@ button[onclick="limpiarBusqueda()"] {
 }
 
 button[onclick="exportarCSV()"] {
-  background-color: rgba(48, 123, 142, 1);
-  border-radius: 90%;
+  background: linear-gradient(45deg,
+    #307B8E,
+    #113A58,
+    #A9D3C5,
+    #376B2B);
+  border-radius: 50%;
+  border: none;
   padding: 10px;
   margin-left: 10px;
+  font-weight: bolder;
   box-shadow: 0 4px 10px rgba(55, 107, 43, 0.3);
+  transition: 0.3s;
 }
 
 .editar,
