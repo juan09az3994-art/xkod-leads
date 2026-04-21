@@ -506,7 +506,7 @@ button[onclick="limpiarBusqueda()"] {
 }
 
 button[onclick="exportarCSV()"] {
-  background: transparent;
+  background: var(--muted);
   border-radius: 50%;
   border: none;
   padding: 10px;
