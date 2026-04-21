@@ -503,12 +503,12 @@ button[onclick="limpiarBusqueda()"] {
   margin-left: 10px;
 }
 
-button[onclick="exportarCSV()"] {
+/* button[onclick="exportarCSV()"] {
   border-radius: 50%;
   padding: 10px;
   margin-left: 10px;
   box-shadow: 0 4px 10px rgba(55, 107, 43, 0.3);
-}
+} */
 
 .editar,
 .eliminar{
