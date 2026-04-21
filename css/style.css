@@ -506,11 +506,7 @@ button[onclick="limpiarBusqueda()"] {
 }
 
 button[onclick="exportarCSV()"] {
-  background: linear-gradient(45deg,
-    #307B8E,
-    #113A58,
-    #A9D3C5,
-    #376B2B);
+  background: linear-gradient(45deg, #307B8E, #113A58, #A9D3C5, #376B2B);
   border-radius: 50%;
   border: none;
   padding: 10px;
@@ -518,6 +514,7 @@ button[onclick="exportarCSV()"] {
   font-weight: bolder;
   box-shadow: 0 4px 10px rgba(55, 107, 43, 0.3);
   transition: 0.3s;
+  animation: mover 5s infinite;
 }
 
 .editar,
@@ -615,4 +612,9 @@ input:focus:invalid{
   .header p  { border-left: none; padding-left: 0; }
   .container { padding: 0 12px; margin: 16px auto; }
   .panel     { padding: 16px; }
+}
+@keyframes mover{
+0%{background-position:0%;}
+50%{background-position:100%;}
+100%{background-position:0%;}
 }
