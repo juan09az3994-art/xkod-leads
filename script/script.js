@@ -187,27 +187,27 @@ function exportarCSV() {
   a.click();
 }
 
-// function reiniciarDatos() {
-//   const confirmar = confirm('¿Estás seguro de reiniciar todos los datos? Esta acción no se puede deshacer.');
-//   if (!confirmar) return;
-//   localStorage.removeItem('leads');
-//   mostrarDatos();
-// } 
+function reiniciarDatos() {
+  const confirmar = confirm('¿Estás seguro de reiniciar todos los datos? Esta acción no se puede deshacer.');
+  if (!confirmar) return;
+  localStorage.removeItem('leads');
+  mostrarDatos();
+} 
 
-// function descargarpdf() {
-//   const { jsPDF } = window.jspdf;
-//   const doc = new jsPDF();
-//   let leads = cargarLeads();
+function descargarpdf() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  let leads = cargarLeads();
 
-//   doc.text("Lista de Leads", 10, 10);
-//   let y = 20;
-//   leads.forEach(lead => {
-//     doc.text(`ID: ${lead.id} | Nombre: ${lead.nombre} | Empresa: ${lead.empresa} | Email: ${lead.email} | Teléfono: ${lead.telefono} | Status: ${lead.status}`, 10, y);
-//     y += 10;
-//   });
+  doc.text("Lista de Leads", 10, 10);
+  let y = 20;
+  leads.forEach(lead => {
+    doc.text(`ID: ${lead.id} | Nombre: ${lead.nombre} | Empresa: ${lead.empresa} | Email: ${lead.email} | Teléfono: ${lead.telefono} | Status: ${lead.status}`, 10, y);
+    y += 10;
+  });
 
-//   doc.save("leads.pdf");
-// }
+  doc.save("leads.pdf");
+}
 
 
 // Ejecutar el metodo 
