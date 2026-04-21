@@ -168,7 +168,7 @@ function limpiarBusqueda() {
   mostrarDatos();
 }
 
-// SEMANA 4: Mostrar datos al cargar la página
+// SEMANA 4: funcion para exportar a CSV
 function exportarCSV() {
   let datos = JSON.parse(localStorage.getItem("leads")) || [];
 
