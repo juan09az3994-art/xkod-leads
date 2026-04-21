@@ -470,21 +470,19 @@ td:last-child{
 button {
   cursor: pointer;
   border: none;
-  background: transparent;
+  background: linear-gradient(90deg,#307B8E,#113A58,#A9D3C5,#376B2B);
   transition: transform 0.2s, opacity 0.2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  animation: mover 5s infinite;
 }
 
 button:hover {
   transform: scale(1.1);
   opacity: 0.8;
 
-  background: linear-gradient(45deg,
-    #376B2B,
-    #307B8E,
-    #113A58);
+  background: linear-gradient(45deg,#376B2B,#307B8E,#113A58);
 }
 
 button[onclick="guardar()"] {
@@ -618,4 +616,9 @@ input:focus:invalid{
   .header p  { border-left: none; padding-left: 0; }
   .container { padding: 0 12px; margin: 16px auto; }
   .panel     { padding: 16px; }
+}
+@keyframes mover{
+0%{background-position:0%;}
+50%{background-position:100%;}
+100%{background-position:0%;}
 }
