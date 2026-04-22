@@ -9,7 +9,7 @@
 .buscador-label {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--accent-green);
   margin-right: 8px;
   min-width: 60px;
 }
@@ -286,35 +286,29 @@ hr {
 /* Inputs específicos del formulario */
 label[for="nombre"]::after {
   content: " *";
-  color: rgb(48, 123, 142);
+  color: var(--accent-green);
   font-size: 12px;
 }
 label[for="empresa"]::after {
   content: " *";
-  color: rgb(48, 123, 142);
+  color: var(--accent-green);
   font-size: 12px;
 }
 label[for="telefono"]::after {
   content: " *";
-  color: rgb(48, 123, 142);
+  color: var(--accent-green);
   font-size: 12px;
 }
 
 label[for="email"]::after {
   content: " *";
-  color: rgb(48, 123, 142);
+  color: var(--accent-green);
   font-size: 12px;
 }
 
 label[for="status"]::after {
   content: " *";
-  color: rgb(48, 123, 142);
-  font-size: 12px;
-}
-
-label[for="buscador"]::after {
-  content: " *";
-  color: rgb(48, 123, 142);
+  color: var(--accent-green);
   font-size: 12px;
 }
 
