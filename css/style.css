@@ -32,18 +32,11 @@
 .buscador-actions {
   gap: 12px;
 }
-/*=============================================
-=                    VARIABLES                 =
-=============================================*/
+/*=============  VARIABLES ======================*/
 :root {
-  --bg:       #113A58;
-  --surface:  #307B8E;
   --border:   rgba(255, 255, 255, 0.12);
-  --accent:   #376B2B;
   --accent-h: #2a5422;
   --text:     #120924;
-  --muted:    #A9D3C5;
-  --dim:      #6a9e8e;
   --radius:   10px;
   --shadow:   0px 4px 10px rgba(0, 0, 0, 0.5);
   --primary-dark: #113A58;   /* Azul Oscuro (Cabeceras) */
@@ -54,9 +47,7 @@
   --white: #fffffff3;
 }
 
-/*=============================================
-=              RESET Y BASE                   =
-=============================================*/
+/*============= RESET Y BASE =====================*/
 *, *::before, *::after { 
   box-sizing: border-box; 
   margin: 0; 
@@ -72,9 +63,7 @@ body {
   line-height: 1.6;
 }
 
-/*=============================================
-=                  HEADER                     =
-=============================================*/
+/*==============  HEADER  =================*/
 .header {
   background: var(--surface);
   padding: 16px 32px;
@@ -98,9 +87,7 @@ body {
   padding-left: 16px;
 }
 
-/*=============================================
-=            CONTENEDOR Y PANEL               =
-=============================================*/
+/*===========  CONTENEDOR Y PANEL  ================*/
 .container {
   max-width: 860px;
   margin: 30px auto;
@@ -159,9 +146,7 @@ hr {
   border:2px solid red;
 }
 
-/*=============================================
-=                FORMULARIO                   =
-=============================================*/
+/*=========== FORMULARIO  ================*/
 .lead-form {
   display: flex;
   flex-direction: column;
@@ -392,9 +377,7 @@ select:focus {
     border-color: rgb(14, 186, 238);
     box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
 }
-/*=============================================
-=                  TABLA                      =
-=============================================*/
+/*=============  TABLA  ======================*/
 .table-scroll {
   overflow-x: auto;
   border-radius: var(--radius);
@@ -478,9 +461,7 @@ td:last-child{
  align-items:center;
 }
 
-/*=============================================
-=              BADGES / ESTADOS               =
-=============================================*/
+/*============  BADGES / ESTADOS  =====================*/
 .badge {
   display: inline-block;
   padding: 3px 10px;
@@ -494,9 +475,7 @@ td:last-child{
 .badgependiente   { background: red;  color: rgba(238, 143, 143, 0.945); }
 .badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
 
-/*=============================================
-=            BOTONES DE ACCIÓN                =
-=============================================*/
+/*=========== BOTONES DE ACCIÓN  ================*/
 button {
   cursor: pointer;
   border: none;
@@ -600,9 +579,7 @@ button[onclick="exportarCSV()"] {
   box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
 }
 
-/*=============================================
-=                 BUSCADOR                    =
-=============================================*/
+/*===============  BUSCADOR  ====================*/
 .container-buscador {
     display: flex;
     justify-content: center;
@@ -623,9 +600,7 @@ input, select {
   color: var(--accent-green);
 }
 
-/*============ VALIDACIÓN ==================
-=               VALIDACIÓN                    =
-=============================================*/
+/*============ VALIDACIÓN ======================*/
 input:invalid {
   border-color: red;
   border: 2px solid red;
