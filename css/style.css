@@ -128,7 +128,29 @@ hr {
   justify-content:right;
   gap:12px;
 }
+.acciones {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.error{
+  display:none;
+  color:white;
+  background:#e67e22;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:12px;
+  margin-top:5px;
+}
 
+input.error-activo{
+  border:2px solid red;
+}
+
+.error{
+  transition: all 0.3s ease;
+}
 /*=============================================
 =                FORMULARIO                   =
 =============================================*/
