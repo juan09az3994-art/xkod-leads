@@ -1,3 +1,10 @@
+}
+
+/* Unificar color de placeholder del buscador con los demás campos */
+#buscador::placeholder {
+  color: var(--dim);
+  opacity: 1;
+}
 /* Layout para el buscador */
 .buscador-row {
   display: flex;
