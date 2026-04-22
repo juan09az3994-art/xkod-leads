@@ -83,6 +83,7 @@ function guardar() {
     telefono: telefono,
     status:   status,
   };
+  alert("Guardado correctamente");
 
   const leads = cargarLeads();
   leads.push(nuevoLead);
