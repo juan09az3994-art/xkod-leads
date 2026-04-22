@@ -43,24 +43,35 @@ function validartelefono() {
   return true;
 }
 
-function camposVacios() {
-  const nombre   = document.getElementById('nombre').value.trim();
-  const empresa  = document.getElementById('empresa').value.trim();
-  const email    = document.getElementById('email').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  if (!nombre || !empresa || !email || !telefono) {
-    alert("Por favor, completa todos los campos antes de guardar.");
-    return true;
-  }
-  return false;
-}
+function validarCampos(){
 
+  let valido = true;
+
+  // NOMBRE
+  let nombre = document.getElementById("nombre");
+  let empresa = document.getElementById("empresa");
+  let error = document.getElementById("error");
+
+  if(nombre.value.trim() === "" && empresa.value.trim() === ""){
+    nombre.classList.add("input-error");
+    empresa.classList.add("input-error");
+    error.style.display = "block";
+    valido = false;
+  } else {
+    nombre.classList.remove("input-error");
+    empresa.classList.remove("input-error");
+    error.style.display = "none";
+  }
+  return valido;
+}
 
 function guardar() {
   // Validar correo antes de guardar el lead
   if (!validarcorreo()) return;
   // Validar teléfono antes de guardar el lead
   if (!validartelefono()) return;
+  // Validar campos obligatorios antes de guardar el lead
+  if (!validarCampos()) return;
 
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
