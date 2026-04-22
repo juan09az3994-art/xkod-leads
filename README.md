@@ -63,14 +63,9 @@ la aplicación.
 ## Estructura del proyecto
 
 xkod-leads/
-├── index.html          → Estructura principal de la página
-│                         Contiene el formulario de captura,
-│                         la tabla de visualización y el buscador
-├── script.js           → Toda la lógica del proyecto en JavaScript
-│                         Aquí están todas las funciones de CRUD,
-│                         búsqueda, validación y exportación
-├── style.css           → Estilos visuales de la aplicación
-│                         Colores, tipografía, diseño responsive
+├── index.html:         → Estructura principal de la página. Contiene el formulario de captura,la tabla de visualización y el buscador
+├── script.js:          → Toda la lógica del proyecto en JavaScript. Aquí están todas las funciones de CRUD,  búsqueda, validación y exportación
+├── style.css           → Estilos visuales de la aplicación. Colores, tipografía, diseño responsive
 ├── imagenes/           → Íconos usados en los botones de la tabla
 │   ├── Emoticons (1).png   → Ícono del botón Eliminar
 │   └── Emoticons (2).png   → Ícono del botón Editar
