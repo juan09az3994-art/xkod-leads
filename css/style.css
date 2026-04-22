@@ -615,6 +615,24 @@ input:focus:invalid{
  box-shadow:0 0 5px red;
 }
 
+/*============ LOGO  ======================*/
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:45px;
+  height:45px;
+}
+
+.logo h2{
+  color:white;
+  font-size:20px;
+  margin:0;
+}
+
 /*============== RESPONSIVE ====================*/
 
 @media (max-width: 600px) {
