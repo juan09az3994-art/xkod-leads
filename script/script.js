@@ -49,25 +49,15 @@ function validarCampos(){
     empresa.classList.remove("input-error");
     errorEmpresa.style.display = "none";
   }
-  
+
   // email y teléfono se validan en sus funciones específicas, pero si están vacíos también se marcan como error
   let email = document.getElementById("email").value;
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!regex.test(email)) {
-    alert("Por favor, ingresa un correo electrónico válido.");
-    return false;
-  }
-
-  return true;
-
-  // Validar teléfono
-
-  const telefono = document.getElementById("telefono").value;
+  let telefono = document.getElementById("telefono").value;
   const regextel = /^\d{7,15}$/;
 
-  if (!regextel.test(telefono)) {
-    alert("Por favor, ingresa un número de teléfono válido.");
+  if (!regex.test(email) && !regextel.test(telefono)) {
+    alert("Por favor, ingresa un correo electrónico o telefono válido.");
     return false;
   }
 
