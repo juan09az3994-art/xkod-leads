@@ -621,12 +621,6 @@ input:focus:invalid{
   align-items:center;
   gap:10px;
 }
-
-.logo img{
-  width:45px;
-  height:45px;
-}
-
 .logo h2{
   color:white;
   font-size:20px;
