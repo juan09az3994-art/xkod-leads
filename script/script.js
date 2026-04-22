@@ -43,8 +43,11 @@ function validartelefono() {
   return true;
 }
 
-function validarcampos(){
-   let valido = true;
+document.getElementById("lead-form").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  let valido = true;
 
   document.querySelectorAll("#lead-form input, #lead-form select").forEach(campo => {
 
@@ -63,10 +66,9 @@ function validarcampos(){
 
   if(valido){
     guardar(); // tu función
-  } else {
-    alert("Por favor, completa todos los campos correctamente.");
   }
-}
+
+});
 
 function guardar() {
   // Validar correo antes de guardar el lead
