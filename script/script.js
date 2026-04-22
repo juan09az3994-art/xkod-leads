@@ -31,9 +31,48 @@ function validarcorreo() {
 
   return true;
 }
+function validartelefono() {
+  const telefono = document.getElementById("telefono").value;
+  const regex = /^\d{7,15}$/;
+
+  if (!regex.test(telefono)) {
+    alert("Por favor, ingresa un número de teléfono válido.");
+    return false;
+  }
+
+  return true;
+}
+
+function validarcampos(){
+   let valido = true;
+
+  document.querySelectorAll("#lead-form input, #lead-form select").forEach(campo => {
+
+    let error = campo.nextElementSibling;
+
+    if(!campo.value || campo.value === ""){
+      campo.classList.add("error-activo");
+      if(error) error.style.display = "block";
+      valido = false;
+    } else {
+      campo.classList.remove("error-activo");
+      if(error) error.style.display = "none";
+    }
+
+  });
+
+  if(valido){
+    guardar(); // tu función
+  } else {
+    alert("Por favor, completa todos los campos correctamente.");
+  }
+}
+
 function guardar() {
   // Validar correo antes de guardar el lead
   if (!validarcorreo()) return;
+  // Validar teléfono antes de guardar el lead
+  if (!validartelefono()) return;
 
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
