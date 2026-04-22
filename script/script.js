@@ -70,9 +70,9 @@ function guardar() {
   if (!validarcorreo()) return;
   // Validar teléfono antes de guardar el lead
   if (!validartelefono()) return;
-  // Validar campos obligatorios antes de guardar el lead
+  // Validar campos obligatorios
   if (!validarCampos()) return;
-
+  
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
   const email    = document.getElementById('email').value;
