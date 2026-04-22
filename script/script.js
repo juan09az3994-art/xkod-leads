@@ -102,6 +102,7 @@ function guardar() {
   const leads = cargarLeads();
   leads.push(nuevoLead);
   guardarLeads(leads);
+  
   mostrarMensaje("Guardado correctamente");
 
   mostrarDatos();
