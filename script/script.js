@@ -43,32 +43,18 @@ function validartelefono() {
   return true;
 }
 
-document.getElementById("lead-form").addEventListener("submit", function(e){
-
-  e.preventDefault();
-
-  let valido = true;
-
-  document.querySelectorAll("#lead-form input, #lead-form select").forEach(campo => {
-
-    let error = campo.nextElementSibling;
-
-    if(!campo.value || campo.value === ""){
-      campo.classList.add("error-activo");
-      if(error) error.style.display = "block";
-      valido = false;
-    } else {
-      campo.classList.remove("error-activo");
-      if(error) error.style.display = "none";
-    }
-
-  });
-
-  if(valido){
-    guardar(); // tu función
+function camposVacios() {
+  const nombre   = document.getElementById('nombre').value.trim();
+  const empresa  = document.getElementById('empresa').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  if (!nombre || !empresa || !email || !telefono) {
+    alert("Por favor, completa todos los campos antes de guardar.");
+    return true;
   }
+  return false;
+}
 
-});
 
 function guardar() {
   // Validar correo antes de guardar el lead
