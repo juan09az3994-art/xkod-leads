@@ -608,8 +608,8 @@ input, select, button {
 }
 
 input, select {
-  background: #1159bd;
-  color: white;
+  background: rgba(55, 107, 43, 0.4);
+  color: var(--primary-light);
 }
 
 /*=============================================
