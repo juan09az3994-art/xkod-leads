@@ -434,10 +434,10 @@ select:focus {
 .leads-tabla tr:last-child td { border-bottom: none; }
 
 .leads-tabla tbody tr:nth-child(odd) td{
-   background:rgba(169, 211, 197, 0.8);
+   background:#CEE5D5;
 }
 .leads-tabla tbody tr:nth-child(even) td {
-  background: rgba(206,229,213,1);
+  background: #A9D3C5;
 }
 
 .leads-tabla  tbody tr:hover td {
@@ -449,14 +449,6 @@ select:focus {
  th, td {
   padding: 10px;
   text-align: center;
-}
-
-th {
-  background: #334155;
-}
-
-tr:nth-child(even) {
-  background: #0f172a;
 }
 
 td:last-child{
@@ -605,6 +597,12 @@ input, select {
   color: var(--accent-green);
 }
 
+#buscador{
+  background:#CEE5D5;
+  color:#113A58;
+  border-radius:8px;
+  padding:10px;
+}
 /*============ VALIDACIÓN ======================*/
 input:invalid {
   border-color: red;
