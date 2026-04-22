@@ -3,13 +3,17 @@
   color: var(--dim);
   opacity: 1;
 }
+
+/* Unificar tamaño de letra del buscador con los demás campos */
+#buscador {
+  font-size: 17px;
+}
 /* Layout para el buscador */
 .buscador-row {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 1.5rem;
-  font-weight: bold;
 }
 
 .buscador-label {
