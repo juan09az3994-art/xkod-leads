@@ -312,6 +312,12 @@ label[for="status"]::after {
   font-size: 12px;
 }
 
+label[for="buscador"]::after {
+  content: " *";
+  color: rgb(48, 123, 142);
+  font-size: 12px;
+}
+
 input[type="text"]{
     width: 100%;
     padding: 10px;
