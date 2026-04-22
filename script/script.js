@@ -42,8 +42,39 @@ function validartelefono() {
 
   return true;
 }
+function validarCampos(){
+
+  let valido = true;
+
+  // NOMBRE
+  let nombre = document.getElementById("nombre");
+  let errorNombre = document.getElementById("errorNombre");
+
+  if(nombre.value.trim() === ""){
+    nombre.classList.add("input-error");
+    errorNombre.style.display = "block";
+    valido = false;
+  } else {
+    nombre.classList.remove("input-error");
+    errorNombre.style.display = "none";
+  }
+
+  // EMPRESA
+  let empresa = document.getElementById("empresa");
+  let errorEmpresa = document.getElementById("errorEmpresa");
+  if(empresa.value.trim() === ""){
+    empresa.classList.add("input-error");
+    errorEmpresa.style.display = "block";
+    valido = false;
+  } else {
+    empresa.classList.remove("input-error");
+    errorEmpresa.style.display = "none";
+  }
+}
 
 function guardar() {
+  // Validar campos antes de guardar el lead
+  if (!validarCampos()) return;
   // Validar correo antes de guardar el lead
   if (!validarcorreo()) return;
   // Validar teléfono antes de guardar el lead
