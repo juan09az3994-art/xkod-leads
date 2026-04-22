@@ -190,9 +190,17 @@ hr {
   justify-content: center;
   margin-top: 16px;
 }
+.form-actions button{
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  background: #376B2B;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
 
-
-.form-actions button {
+/* .form-actions button {
   width: 70px;
   height: 70px;
   min-width: 70px;
@@ -210,7 +218,7 @@ hr {
   transition: transform 0.2s, box-shadow 0.2s;
   padding: 0;
   overflow: hidden;
-}
+} */
 
 .form-actions button img {
   width: 38px;
