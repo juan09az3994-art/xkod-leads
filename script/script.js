@@ -20,28 +20,7 @@ function guardarLeads(leads) {
    Se ejecuta al hacer clic en "Guardar Prospecto".
     Lee el formulario, crea el objeto y lo guarda.
  */
-function validarcorreo() {
-  const email = document.getElementById("email").value;
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!regex.test(email)) {
-    alert("Por favor, ingresa un correo electrónico válido.");
-    return false;
-  }
-
-  return true;
-}
-function validartelefono() {
-  const telefono = document.getElementById("telefono").value;
-  const regex = /^\d{7,15}$/;
-
-  if (!regex.test(telefono)) {
-    alert("Por favor, ingresa un número de teléfono válido.");
-    return false;
-  }
-
-  return true;
-}
 function validarCampos(){
 
   let valido = true;
@@ -70,15 +49,35 @@ function validarCampos(){
     empresa.classList.remove("input-error");
     errorEmpresa.style.display = "none";
   }
+  
+  // email y teléfono se validan en sus funciones específicas, pero si están vacíos también se marcan como error
+  let email = document.getElementById("email").value;
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!regex.test(email)) {
+    alert("Por favor, ingresa un correo electrónico válido.");
+    return false;
+  }
+
+  return true;
+
+  // Validar teléfono
+
+  const telefono = document.getElementById("telefono").value;
+  const regextel = /^\d{7,15}$/;
+
+  if (!regextel.test(telefono)) {
+    alert("Por favor, ingresa un número de teléfono válido.");
+    return false;
+  }
+
+  return true;
+
 }
 
 function guardar() {
   // Validar campos antes de guardar el lead
   if (!validarCampos()) return;
-  // Validar correo antes de guardar el lead
-  if (!validarcorreo()) return;
-  // Validar teléfono antes de guardar el lead
-  if (!validartelefono()) return;
 
   const nombre   = document.getElementById('nombre').value;
   const empresa  = document.getElementById('empresa').value;
