@@ -57,47 +57,48 @@
           <button type="button" onclick="guardar()" title="Guardar"><img src="imagenes/Emoticons (4).png" alt="save" width="50px" height="50px"></button>
         </div>
       </form>
-      <div class="container-buscador">
-          <h2>Buscador</h2>
-          <div class="buscador-row">
-            <br>
-            <hr>
-            <label for="buscador" class="buscador-label"></label>
-            <input type="text" id="buscador" placeholder="Buscar por ID o Nombre">
-            <div class="form-actions buscador-actions">
-              <button type="button" onclick="buscar()" title="Buscar"><img src="imagenes/Emoticons (3).png" alt="search" width="50px" height="50px"></button>
-              <button type="button" onclick="limpiarBusqueda()" title="Limpiar búsqueda"><img src="imagenes/Emoticons (6).png" alt="clear" width="50px" height="50px"></button>
-            </div>
-          </div>
-        </div>
     </section>
     <hr>
     <!-- TABLA-->
     <section class="panel">
-      <h2>Tabla</h2>
-      <div class="botones">
-        <button type="button" onclick="exportarCSV()" title="Exportar CSV"><img src="imagenes/Emoticons (5).png" alt="Exportar a CSV" width="50px" height="50px"></button>
+      <div class="container-buscador">
+    <h2>Buscador</h2>
+    <div class="buscador-row">
+      <br>
+      <hr>
+      <label for="buscador" class="buscador-label"></label>
+      <input type="text" id="buscador" placeholder="Buscar por ID o Nombre">
+      <div class="form-actions buscador-actions">
+        <button type="button" onclick="buscar()" title="Buscar"><img src="imagenes/Emoticons (3).png" alt="search" width="50px" height="50px"></button>
+        <button type="button" onclick="limpiarBusqueda()" title="Limpiar búsqueda"><img src="imagenes/Emoticons (6).png" alt="clear" width="50px" height="50px"></button>
       </div>
-      <div class="tabla">
-        <div class="table-scroll">
-          <table class="leads-tabla">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Empresa</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Status</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="tablaDatos"></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script src="script/script.js" defer></script>
+    </div>
+  </div>
+
+  <h2>Tabla</h2>
+  <div class="botones">
+    <button type="button" onclick="exportarCSV()" title="Exportar CSV"><img src="imagenes/Emoticons (5).png" alt="Exportar a CSV" width="50px" height="50px"></button>
+  </div>
+  <div class="tabla">
+    <div class="table-scroll">
+      <table class="leads-tabla">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Empresa</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tablaDatos"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+<script src="script/script.js" defer></script>
 </body>
 </html>
