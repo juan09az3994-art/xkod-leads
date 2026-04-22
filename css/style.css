@@ -237,7 +237,7 @@ hr {
   text-align: left;
 }
 
-.lead-form input,
+/* .lead-form input,
 .lead-form select {
   background: rgba(55, 107, 43, 0.4);
   border: 1px solid var(--border);
@@ -258,6 +258,23 @@ hr {
 .lead-form select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
+} */
+
+.lead-form input,
+.lead-form select{
+  background: #CEE5D5;
+  color: #113A58;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.lead-form input:focus,
+.lead-form select:focus{
+  border-color: #307B8E;
+  box-shadow: 0 0 0 3px rgba(48,123,142,0.2);
 }
 
 .lead-form br { display: none; }
@@ -324,7 +341,7 @@ input[type="text"]:focus{
     box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
 }
 
-input[type="tel"]{
+/* input[type="tel"]{
     width: 100%;
     padding: 10px;
     font-size: 1.1em;
@@ -365,7 +382,7 @@ input[type="submit"]{
 }
 
 input[type="submit"]:hover  { background: var(--accent-h); transform: scale(1.02); }
-input[type="submit"]:active { transform: scale(0.98); }
+input[type="submit"]:active { transform: scale(0.98); } */
 
 select {
     width: 100%;
