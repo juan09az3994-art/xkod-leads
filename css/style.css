@@ -34,9 +34,14 @@
 }
 /*=============  VARIABLES ======================*/
 :root {
+  --bg:       #113A58;
+  --surface:  #307B8E;
   --border:   rgba(255, 255, 255, 0.12);
+  --accent:   #376B2B;
   --accent-h: #2a5422;
   --text:     #120924;
+  --muted:    #A9D3C5;
+  --dim:      #6a9e8e;
   --radius:   10px;
   --shadow:   0px 4px 10px rgba(0, 0, 0, 0.5);
   --primary-dark: #113A58;   /* Azul Oscuro (Cabeceras) */
