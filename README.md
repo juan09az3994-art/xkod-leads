@@ -5,7 +5,7 @@ Gestor de prospectos XKOD
 3. Eddie - Data & Quality Engineer:
 
 
-# XKOD Leads 📋
+# XKOD Leads
 
 Herramienta interna desarrollada por el equipo XKOD para gestionar 
 prospectos y leads de ventas directamente desde el navegador, sin 
