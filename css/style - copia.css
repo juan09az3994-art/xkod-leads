@@ -1,0 +1,651 @@
+/* Unificar color de placeholder del buscador con los demás campos */
+#buscador::placeholder {
+  color: var(--dim);
+  opacity: 1;
+}
+
+/* Unificar tamaño de letra del buscador con los demás campos */
+#buscador {
+  font-size: 17px;
+}
+/* Layout para el buscador */
+.buscador-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.buscador-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  margin-right: 8px;
+  min-width: 60px;
+}
+
+.buscador-row input[type="text"] {
+  flex: 1 1 250px;
+  max-width: 400px;
+}
+
+.buscador-actions {
+  gap: 12px;
+}
+/*=============================================
+=                    VARIABLES                 =
+=============================================*/
+:root {
+  --bg:       #113A58;
+  --surface:  #307B8E;
+  --border:   rgba(255, 255, 255, 0.12);
+  --accent:   #376B2B;
+  --accent-h: #2a5422;
+  --text:     #120924;
+  --muted:    #A9D3C5;
+  --dim:      #6a9e8e;
+  --radius:   10px;
+  --shadow:   0px 4px 10px rgba(0, 0, 0, 0.5);
+  --primary-dark: #113A58;   /* Azul Oscuro (Cabeceras) */
+  --primary-light: #307B8E;  /* Turquesa (Botones secundarios) */
+  --accent-green: #376B2B;   /* Verde Bosque (Guardar/Confirmar) */
+  --bg-soft: #CEE5D5;        /* Verde muy claro (Fondo general) */
+  --table-highlight: #A9D3C5; /* Verde menta (Filas/Bordes) */
+  --white: #fffffff3;
+}
+
+/*=============================================
+=              RESET Y BASE                   =
+=============================================*/
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/*=============================================
+=                  HEADER                     =
+=============================================*/
+.header {
+  background: var(--surface);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+.header p {
+  color: var(--muted);
+  font-size: 13px;
+  border-left: 1px solid var(--border);
+  padding-left: 16px;
+}
+
+/*=============================================
+=            CONTENEDOR Y PANEL               =
+=============================================*/
+.container {
+  max-width: 860px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  border-top: 5px solid var(--primary-light);
+  overflow:hidden;
+}
+
+h1, h2, h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 40px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+
+.botones {
+  display:flex;
+  justify-content:right;
+  gap:12px;
+}
+.acciones {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.error{
+  display:none;
+  color:white;
+  background:#e67e22;
+  padding:5px 8px;
+  border-radius:5px;
+  font-size:12px;
+  margin-top:4px;
+  transition: all 0.3s ease;
+}
+
+.input-error{
+  border:2px solid red;
+}
+
+/*=============================================
+=                FORMULARIO                   =
+=============================================*/
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Grid responsivo para labels e inputs */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pantalla mediana - 2 columnas */
+@media (min-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Pantalla grande - 3 columnas */
+@media (min-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Centrar botón de guardar */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+
+.form-actions button {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 0;
+  overflow: hidden;
+}
+
+.form-actions button img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.form-actions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.form-actions button:active {
+  transform: scale(0.95);
+}
+
+.lead-form label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.lead-form input,
+.lead-form select {
+  background: rgba(55, 107, 43, 0.4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) 6px;
+  color: var(--primary-light);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding: 10px 17px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 1.2rem;
+}
+
+.lead-form input::placeholder { color: var(--dim); }
+
+.lead-form input:focus,
+.lead-form select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
+}
+
+.lead-form br { display: none; }
+
+.lead-form select option { background: var(--bg-soft); color: #120924; }
+
+.lead-form button {
+  background: var(--accent);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  width: 100%;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 10px rgba(55, 107, 43, 0.4);
+}
+
+.lead-form button:hover  { background: var(--accent-h); transform: scale(1.02); }
+.lead-form button:active { transform: scale(0.98); }
+
+/* Inputs específicos del formulario */
+label[for="nombre"]::after {
+  content: " *";
+  color: var(--accent-green);
+  font-size: 12px;
+}
+label[for="empresa"]::after {
+  content: " *";
+  color: var(--accent-green);
+  font-size: 12px;
+}
+label[for="telefono"]::after {
+  content: " *";
+  color: var(--accent-green);
+  font-size: 12px;
+}
+
+label[for="email"]::after {
+  content: " *";
+  color: var(--accent-green);
+  font-size: 12px;
+}
+
+label[for="status"]::after {
+  content: " *";
+  color: var(--accent-green);
+  font-size: 12px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="text"]:focus{
+    border-color: rgb(21, 131, 134);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+
+input[type="tel"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="tel"]:focus{
+    border-color: rgb(106, 12, 134);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.5);
+}
+input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input[type="email"]:focus{
+    border-color: rgb(238, 14, 171);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+
+input[type="submit"]{
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 10px rgba(55, 107, 43, 0.4);
+}
+
+input[type="submit"]:hover  { background: var(--accent-h); transform: scale(1.02); }
+input[type="submit"]:active { transform: scale(0.98); }
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: white;
+    color: #333333;
+}
+select:focus {
+    border-color: rgb(14, 186, 238);
+    box-shadow: 0 0 0 3px rgba(83, 110, 231, 0.1);
+}
+/*=============================================
+=                  TABLA                      =
+=============================================*/
+.table-scroll {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  width: 100%;
+  display: block;
+}
+
+.leads-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  border: none !important;
+  table-layout:auto;
+}
+
+.leads-tabla thead {
+  background: var(--bg);
+}
+
+.leads-tabla th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--accent);
+  background:#113A58;
+  color:#dbcccc;
+  font-size:13px;
+  font-weight:bold;
+  text-align:center;
+  padding:16px 12px;
+  border-bottom:3px solid #A9D3C5;
+}
+
+.leads-tabla td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+  padding:8px 10px;
+  font-size:12px;
+  text-align: center;
+}
+
+.leads-tabla tr:last-child td { border-bottom: none; }
+
+.leads-tabla tbody tr:nth-child(odd) td{
+   background:rgba(169, 211, 197, 0.8);
+}
+.leads-tabla tbody tr:nth-child(even) td {
+  background: rgba(206,229,213,1);
+}
+
+.leads-tabla  tbody tr:hover td {
+  background: rgba(55, 107, 43, 0.15);
+  color: #ffffff9c;
+  transition: background 0.2s;
+}
+
+ th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #334155;
+}
+
+tr:nth-child(even) {
+  background: #0f172a;
+}
+
+td:last-child{
+ display:flex;
+ gap:6px;
+ justify-content:center;
+ align-items:center;
+}
+
+/*=============================================
+=              BADGES / ESTADOS               =
+=============================================*/
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badgecontactado  { background: green; color: rgba(170, 247, 155, 0.685); }
+.badgependiente   { background: red;  color: rgba(238, 143, 143, 0.945); }
+.badgenegociacion { background: rgb(2, 2, 75);  color: rgba(111, 202, 224, 0.747); }
+
+/*=============================================
+=            BOTONES DE ACCIÓN                =
+=============================================*/
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: transform 0.2s, opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  background: linear-gradient(45deg, #376B2B, #307B8E, #113A58);
+}
+
+button[onclick="guardar()"] {
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(55, 107, 43, 0.3);
+}
+
+button[onclick="buscar()"] {
+  background-color: var(--primary-light);
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(48, 123, 142, 0.3);
+}
+
+button[onclick="limpiarBusqueda()"] {
+  background-color: var(--table-highlight);
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-left: 10px;
+}
+
+button[onclick="exportarCSV()"] {
+  background: var(--muted);
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: bolder;
+  box-shadow: 0 4px 10px rgba(55, 107, 43, 0.3);
+  transition: 0.3s;
+  animation: mover 5s infinite;
+}
+
+.editar,
+.eliminar{
+   padding:4px;
+}
+
+#eliminar-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+#eliminar-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+#eliminar-btn:active {
+  background: var(--accent-h);
+  color: white;
+}
+#eliminar-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
+}
+
+#editar-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+#editar-btn:hover {
+  background: var(--accent);
+  color: rgba(255, 255, 255, 0.247);
+}
+#editar-btn:active {
+  background: var(--accent-h);
+  color: rgba(255, 255, 255, 0.096);
+}
+#editar-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(55, 107, 43, 0.25);
+}
+
+/*=============================================
+=                 BUSCADOR                    =
+=============================================*/
+.container-buscador {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+}
+
+input, select {
+  background: rgba(55, 107, 43, 0.4);
+  color: var(--accent-green);
+}
+
+/*=============================================
+=               VALIDACIÓN                    =
+=============================================*/
+input:invalid {
+  border-color: red;
+  border: 2px solid red;
+}
+
+input:focus:invalid{
+ box-shadow:0 0 5px red;
+}
+
+/*=============================================
+=               RESPONSIVE                    =
+=============================================*/
+@media (max-width: 600px) {
+  .header    { flex-direction: column; gap: 8px; padding: 14px; }
+  .header p  { border-left: none; padding-left: 0; }
+  .container { padding: 0 12px; margin: 16px auto; }
+  .panel     { padding: 16px; }
+}
+@keyframes mover{
+0%{background-position:0%;}
+50%{background-position:100%;}
+100%{background-position:0%;}
+}
