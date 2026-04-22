@@ -64,6 +64,21 @@ function validarCampos(){
   return true;
 
 }
+function mostrarMensaje(msg){
+  let aviso = document.createElement("div");
+  aviso.innerText = msg;
+  aviso.style.position = "fixed";
+  aviso.style.bottom = "20px";
+  aviso.style.right = "20px";
+  aviso.style.background = "#376B2B";
+  aviso.style.color = "white";
+  aviso.style.padding = "10px";
+  aviso.style.borderRadius = "8px";
+
+  document.body.appendChild(aviso);
+
+  setTimeout(()=> aviso.remove(), 2000);
+}
 
 function guardar() {
   // Validar campos antes de guardar el lead
@@ -83,11 +98,11 @@ function guardar() {
     telefono: telefono,
     status:   status,
   };
-  alert("Guardado correctamente");
 
   const leads = cargarLeads();
   leads.push(nuevoLead);
   guardarLeads(leads);
+  mostrarMensaje("Guardado correctamente");
 
   mostrarDatos();
   document.getElementById('lead-form').reset();
