@@ -56,7 +56,7 @@ function validarCampos(){
   let telefono = document.getElementById("telefono").value;
   const regextel = /^\d{7,15}$/;
 
-  if (!regex.test(email) && !regextel.test(telefono)) {
+  if (!regex.test(email) || !regextel.test(telefono)) {
     alert("Por favor, ingresa un correo electrónico o telefono válido.");
     return false;
   }
