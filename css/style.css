@@ -609,7 +609,7 @@ input, select, button {
 
 input, select {
   background: rgba(55, 107, 43, 0.4);
-  color: var(--primary-light);
+  color: var(--accent-green);
 }
 
 /*=============================================
