@@ -579,7 +579,7 @@ p{
   font-size: 13px;
   border-left: 1px solid var(--border);
   padding-left: 16px;
-  text-align: left;
+  text-align: right;
 }
 
 footer {
