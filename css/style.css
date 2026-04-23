@@ -585,9 +585,9 @@ p{
 footer {
   background: var(--surface);
   color: var(--white);
-  padding: 16px;
+  padding: 13px;
   margin-top: 2rem;
-  box-shadow: var(--shadow);
+  text-align: center;
 
 }
 /*============== RESPONSIVE ====================*/
