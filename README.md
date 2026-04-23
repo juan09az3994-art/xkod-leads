@@ -64,11 +64,17 @@ la aplicación.
 
 xkod-leads/
 - index.html:         → Estructura principal de la página. Contiene el formulario de captura,la tabla de visualización y el buscador
-- script.js:          → Toda la lógica del proyecto en JavaScript. Aquí están todas las funciones de CRUD,  búsqueda, validación y exportación
-- style.css           → Estilos visuales de la aplicación. Colores, tipografía, diseño responsive
+- script → script.js:          → Toda la lógica del proyecto en JavaScript. Aquí están todas las funciones de CRUD,  búsqueda, validación y exportación
+- css → style.css           → Estilos visuales de la aplicación. Colores, tipografía, diseño responsive
 -  imagenes/           → Íconos usados en los botones de la tabla
-   ├── Emoticons (1).png   → Ícono del botón Eliminar
-     └── Emoticons (2).png   → Ícono del botón Editar
+   ├── Emoticons (1).png  → Ícono del botón Eliminar
+     └── Emoticons (2).png  → Ícono del botón Editar
+         └── Emoticons (3).png  → Ícono del botón Buscar
+             └── Emoticons (4).png → Ícono del botón Guardar
+                  └── Emoticons (5).png → Ícono del botón Guardar CSV
+                     └── Emoticons (6).png → Ícono del botón limpiar Busqueda
+                         └── stegoss.png → Logo de estegosaurio de empresa XKOD
+                             └── xkodgood.png → Logo textual empresa XKOD 
 - README.md           → Este archivo de documentación
 
 
