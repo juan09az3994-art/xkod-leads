@@ -582,6 +582,7 @@ p{
 }
 
 footer {
+  background: var(--surface);
   color: var(--white);
   text-align: right;
   padding: 16px;
