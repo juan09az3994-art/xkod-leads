@@ -579,12 +579,12 @@ p{
   font-size: 13px;
   border-left: 1px solid var(--border);
   padding-left: 16px;
+  text-align: left;
 }
 
 footer {
   background: var(--surface);
   color: var(--white);
-  text-align: left;
   padding: 16px;
   margin-top: 2rem;
   box-shadow: var(--shadow);
