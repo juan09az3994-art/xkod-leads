@@ -584,7 +584,7 @@ p{
 footer {
   background: var(--surface);
   color: var(--muted);
-  text-align: center;
+  text-align: right;
   padding: 16px;
   margin-top: 2rem;
   box-shadow: var(--shadow);
