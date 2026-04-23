@@ -579,15 +579,17 @@ p{
   font-size: 13px;
   border-left: 1px solid var(--border);
   padding-left: 16px;
+  text-align: right;
 }
 
 footer {
   background: var(--surface);
   color: var(--white);
-  text-align: right;
+  text-align: center;
   padding: 16px;
   margin-top: 2rem;
   box-shadow: var(--shadow);
+
 }
 /*============== RESPONSIVE ====================*/
 
