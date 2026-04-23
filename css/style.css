@@ -127,7 +127,8 @@ hr {
 
 .botones {
   display:flex;
-  text-align: center;
+  text-align: left;
+  justify-content: right;
   align-items: right;
   gap:12px;
 }
