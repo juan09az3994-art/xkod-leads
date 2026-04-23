@@ -575,7 +575,7 @@ input:focus:invalid{
   margin:0;
 }
 p{
-  color: var(--muted);
+  color: var(--white);
   font-size: 13px;
   border-left: 1px solid var(--border);
   padding-left: 16px;
